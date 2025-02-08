@@ -1,0 +1,136 @@
+@use "sass:math";
+
+// FONTS
+$fontMain: "Roboto", serif;
+$fontSec: "Inter", serif;
+
+// FONTS WEIGHTS
+$black: 900;
+$bolder: 700;
+$bold: 600;
+$semiBold: 500;
+$regular: 400;
+$light: 300;
+$thin: 100;
+
+// MIXINS
+@mixin prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+
+@mixin toRem($px-value, $base-font-size: 16px) {
+    $rem-value: math.div($px-value, $base-font-size) * 1rem;
+    font-size: #{$rem-value};
+}
+
+@mixin flexProp($props...) {
+    @each $prop, $value in $props {
+        @if $prop ==display {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        @else if $prop ==flex-direction {
+            -webkit-box-orient: #{if($value == row, horizontal, vertical)};
+            -webkit-box-direction: #{if($value == row-reverse, reverse, normal)};
+            -ms-flex-direction: $value;
+            flex-direction: $value;
+        }
+
+        @else if $prop ==align-items {
+            -webkit-box-align: #{if($value == flex-start, start, center)};
+            -ms-flex-align: $value;
+            align-items: $value;
+        }
+
+        @else if $prop ==justify-content {
+            -webkit-box-pack: #{if($value == flex-start, start, center)};
+            -ms-flex-pack: $value;
+            justify-content: $value;
+        }
+
+        @else if $prop ==flex-wrap {
+            -ms-flex-wrap: $value;
+            flex-wrap: $value;
+        }
+
+        @else if $prop ==align-content {
+            -ms-flex-line-pack: $value;
+            align-content: $value;
+        }
+
+        @else if $prop ==order {
+            -webkit-box-ordinal-group: $value;
+            -ms-flex-order: $value;
+            order: $value;
+        }
+
+        @else if $prop ==flex-grow {
+            -webkit-box-flex: $value;
+            -ms-flex-positive: $value;
+            flex-grow: $value;
+        }
+
+        @else if $prop ==flex-shrink {
+            -ms-flex-negative: $value;
+            flex-shrink: $value;
+        }
+
+        @else if $prop ==flex-basis {
+            -ms-flex-preferred-size: $value;
+            flex-basis: $value;
+        }
+
+        @else if $prop ==align-self {
+            -ms-flex-item-align: $value;
+            align-self: $value;
+        }
+
+        @else if $prop ==flex {
+            -webkit-box-flex: $value;
+            -ms-flex: $value;
+            flex: $value;
+        }
+
+        @else if $prop ==flex-flow {
+            -ms-flex-flow: $value;
+            flex-flow: $value;
+        }
+    }
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content
+    }
+
+    :-moz-placeholder {
+        @content
+    }
+
+    ::-moz-placeholder {
+        @content
+    }
+
+    :-ms-input-placeholder {
+        @content
+    }
+}
+
+// BREAKPOINTS
+$bp320: 320px;
+$bp375: 375px;
+$bp480: 480px;
+$bp500: 500px;
+$bp600: 600px;
+$bp680: 680px;
+$bp768: 768px;
+$bp992: 992px;
+$bp1024: 1024px;
+$bp1200: 1200px;
+$bp1400: 1400px;
+$bp1600: 1600px;
+$bp2560: 2560px;
