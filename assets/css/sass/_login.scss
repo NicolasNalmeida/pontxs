@@ -86,38 +86,6 @@
                     );
                 }            
             }
-    
-            .btn-login {
-                cursor: pointer;
-                text-decoration: none;
-                background-color: #fff;
-                width: 100%;
-                border: 2px solid #8C8F99;
-                border-radius: 10px;
-                text-align: center;
-                display: block;
-                color: #9377C6;
-                padding: 14px;
-                transition: .3s;
-
-                &.full {
-                    background-color: #9377C6;
-                    border: 2px solid #9377C6;
-                    color: #fff;
-                    font-weight: vars.$bold;
-                    @include vars.toRem(16px);
-                }
-
-                @media(max-width: vars.$bp375) {
-                    @include vars.toRem(13px);
-                }
-
-                &:hover { border-radius: 30px; }
-                &.bold { 
-                    font-weight: vars.$bold;
-                    @include vars.toRem(16px);
-                }
-            }
         }
 
         .info { 
@@ -165,6 +133,47 @@
             left: initial;
             opacity: 1;
             @include vars.prefix(transform, initial);
+        }
+    }
+
+    .modal-first-access {
+        .first-access {
+            width: 100%;
+        }
+
+        .effect {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 15px;
+            color: #9377C6;
+            @include vars.toRem(25px);
+        }
+
+        .form-default {
+            padding: 0;
+            margin-top: 10px;
+            text-align: left;
+
+            label {
+                font-weight: vars.$bold;
+                margin-bottom: 10px;
+                display: block;
+                color: #424242;
+            }
+
+            button {
+                width: 48%;
+            }
+
+            .info {
+                display: block;
+                text-align: center;
+                font-weight: vars.$regular;
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
         }
     }
 }

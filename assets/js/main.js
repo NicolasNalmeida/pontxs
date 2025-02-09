@@ -26,18 +26,21 @@ function modal(status) {
         arr = [
             '<i class="icon success bi bi-check-lg"></i>',
             '<strong>Solicitação realizada com sucesso. Enviamos um link para o seu e-mail para o cadastro de uma nova senha.</strong>',
-        ];        
+        ];
+        modal.classList.remove('politica');     
     } else if(status === false) {
         carr = [
             '<i class="icon warning bi bi-exclamation-triangle-fill"></i>',
             '<strong>O dado informado não foi localizado. Por favor, entre em contato em Fale Conosco.</strong>',
             '<a class="info" href="javascript:;">Fale Conosco.<a>'
         ];
+        modal.classList.remove('politica');
     } else if(status === 'modaltrue') {
         arr = [
             '<i class="icon success bi bi-check-lg"></i>',
             '<strong class="login-true">Redefinição de senha<br> realizada com sucesso.</strong>',
         ];
+        modal.classList.remove('politica');
     } else if(status === 'politica') {
         arr = [
             '<h1>Política de Privacidade</h1>',
@@ -50,6 +53,19 @@ function modal(status) {
     }
     
     textMessage.innerHTML = arr.join(' ');
+    modal.classList.add('show');
+    
+    close.addEventListener('click', function() {
+        modal.classList.remove('show');
+    });
+}
+
+function modalFirstAccess() {
+    var modal = document.querySelector('.modal-first-access');
+    var close = document.querySelector('.modal-first-access .close');
+
+    console.log(modal)    
+
     modal.classList.add('show');
     
     close.addEventListener('click', function() {
