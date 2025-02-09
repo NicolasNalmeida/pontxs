@@ -88,16 +88,15 @@
         .user-action {
             width: 15%;
             color: #888888;
-
-            @media(max-width: vars.$bp1200) {
-                width: 20%;
-            }
-
             @include vars.flexProp(
                 (display, flex),
                 (align-items, center),
                 (justify-content, space-between)
             );
+
+            @media(max-width: vars.$bp1200) {
+                width: 20%;
+            }
 
             .fav-button,
             .cart-button {
