@@ -42,7 +42,7 @@ html, body {
         background-color: #9377C6;
         border-radius: 20px;
         padding: 0 0 5px 5px;
-        border: 3px solid #424242;
+        border: 3px solid #333;
         
         .effect {
             background-color: #fff;
@@ -112,6 +112,11 @@ html, body {
             strong {
                 color: #3F454B;
                 line-height: 20px;
+
+                &.login-true {
+                    color: #9377C6;
+                    @include vars.toRem(18px);
+                }
             }
 
             .info {
@@ -162,6 +167,37 @@ html, body {
                     font-weight: vars.$regular;
                     letter-spacing: 1px;
                     line-height: 20px;
+                }
+            }
+        }
+    }
+
+    &.modal {
+        .content {
+            width: 40%;
+            padding: 0px 0px 10px 0px;
+
+            .message {
+                text-align: left;
+                @include vars.flexProp((align-items, flex-start));
+                * { width: 100%; }
+
+                h1 {
+                    border-bottom: 1px solid #bbb;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    @include vars.toRem(20px);
+                }
+
+                h2 {
+                    color: #9377C6;
+                    @include vars.toRem(20px);
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    margin-bottom: 15px;
+                    &:last-child {margin-bottom: 0;}
                 }
             }
         }

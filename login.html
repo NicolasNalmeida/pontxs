@@ -20,8 +20,8 @@
                 <figcaption class="cap-logo">Catálogo<br> de Prêmios</figcaption>
             </figure>
 
-            <!-- LOGIN -->
-            <form class="login-form form-effect" data-step="zero">
+            <!-- LOGIN PRIMEIRO ACESSO -->
+            <form class="login-form form-effect hide" data-step="zero">
                 <div class="form-default">
                     <div class="form-control">
                         <label for="login" class="label">Login</label>
@@ -44,6 +44,30 @@
                 </div>
             </form>
 
+            <!-- LOGIN NORMAL -->
+            <form class="login-form form-effect" data-step="zero">
+                <div class="form-default">
+                    <div class="form-control">
+                        <label for="login" class="label">Login</label>
+                        <input class="input" type="text" name="login" id="login" placeholder="Insira o seu CPF ou o seu CNPJ">
+                    </div>
+                    <div class="form-control">
+                        <label for="password" class="label">Senha</label>
+                        <input class="input" type="password" name="password" id="password" placeholder="Insira a sua senha">
+                    </div>
+                    <div class="form-control flex-remember">
+                        <div class="remeber-content">
+                            <input type="checkbox" name="remeber" id="remeber">
+                            <label for="remeber">Lembrar senha</label>
+                        </div>
+                        <a href="javascript:;">Esqueci a senha</a>
+                    </div>
+                    <div class="form-control">
+                        <button type="button" class="btn-login full" onclick="modal('modaltrue')">Enviar</button>
+                    </div>
+                </div>
+            </form>
+
             <!-- RECUPERAR SENHA -->
             <form class="login-form form-effect" data-step="one">
                 <div class="form-default">
@@ -52,7 +76,7 @@
                         <input class="input" type="text" name="cpfCnpj" id="cpfCnpj" placeholder="Insira o seu CPF ou o seu CNPJ">
                     </div>
                     <div class="form-control">
-                        <button type="button" onclick="modal(false)" class="btn-login bold">Recuperar minha senha</a>
+                        <button type="button" onclick="modal(true)" class="btn-login bold">Recuperar minha senha</a>
                     </div>
                     <div class="form-control info">
                         <a href="javascript:;">Dúvidas? Fale conosco</a>
@@ -63,7 +87,7 @@
         <div class="terms">
             <a href="javascript:;">Termos de uso</a>
             <span class="separator">|</span>
-            <a href="javascript:;">Termos de uso</a>
+            <a href="javascript:;" onclick="modal('politica')">Política de privacidade</a>
         </div>
         <div class="fale-conosco">
             <a href="javascript:;">
