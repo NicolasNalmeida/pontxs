@@ -4,6 +4,7 @@ html, body {
     font-family: vars.$fontMain;
     @include vars.toRem(16px);
     font-weight: vars.$regular;
+    background-color: #F4F4F4;
 }
 
 .bg-site {

@@ -163,8 +163,11 @@
                 color: #424242;
             }
 
-            button {
+            .btn-login {
+                display: block;
                 width: 48%;
+                @include vars.toRem(16px);
+                font-weight: vars.$bold;
             }
 
             .info {
