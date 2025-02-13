@@ -1,0 +1,54 @@
+@use "vars";
+
+.footer {
+    .nav-footer {
+        background-color: #E5E5E557;
+        padding: 20px 0;
+
+        a {
+            color: #8168AF;
+            font-weight: vars.$bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+
+            &:last-child::after { display: none; }
+            &::after {
+                content: " | ";
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        @media(max-width: vars.$bp768) {
+            a { @include vars.toRem(12px); }
+            text-align: center;
+        }
+    }
+
+    .down-footer {
+        background-color: #E5E5E5;
+        padding: 10px 0;
+
+        .flex {
+            @include vars.flexProp(
+                (display, flex),
+                (align-items, center),
+                (justify-content, space-between)
+            );
+        }
+
+        .cap { width: 40%; }
+        .logo { width: 8%; }
+
+        @media(max-width: vars.$bp992) {
+            .cap { width: 60%; }
+            .logo { width: 8%; }
+        }
+
+        @media(max-width: vars.$bp600) {
+            .cap { display: none;; }
+            .logo { width: 20%; margin: 0 auto; }
+        }
+    }
+}
