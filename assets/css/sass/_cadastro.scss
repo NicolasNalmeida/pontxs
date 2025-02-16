@@ -1,0 +1,218 @@
+@use 'vars'; // Ajuste conforme sua configuração de variáveis e mixins
+
+.page-cadastro {
+    padding: 20px 0;
+
+    .cadastro {
+        // Remove/ajuste margens para centralizar melhor
+        margin: 0 auto;
+        max-width: 900px;
+
+        .cadastro-header {
+            // Ajuste a forma como quiser exibir o breadcrumb e o título
+            margin-bottom: 30px;
+            border-bottom: 1px solid #D9D9D9;
+
+            .breadcrumb {
+                color: #4B4B4B;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #4B4B4B;
+                    padding-bottom: 50px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            h1 {
+                font-family: vars.$fontMain;
+                font-weight: vars.$regular;
+                font-size: 1.875rem; // 30px
+                color: #303030;
+                margin: 20px 0 20px 0 ;
+            }
+        }
+
+        .form-default {
+            background-color: #F1F1F1; // Fundo branco
+            border: 1px solid #9377C6; // Borda roxa
+            border-radius: 8px; // Bordas arredondadas
+            padding: 20px;
+            margin-bottom: 30px; // Espaçamento entre blocos
+
+            h2 {
+                font-size: 1.25rem; // ~20px
+                font-weight: vars.$bold;
+                color: #303030;
+                margin-bottom: 20px;
+            }
+
+            .required {
+                color: #9377C6;
+            }
+
+            .form-control {
+                margin-bottom: 15px;
+
+                .label {
+                    font-weight: vars.$bold;
+                    display: block;
+                    color: #424242;
+                    margin-bottom: 6px;
+                    @include vars.toRem(15px);
+
+                    @media(max-width: vars.$bp768) {
+                        .label {
+                            @include vars.toRem(15px);
+                        }
+                    }
+                }
+
+                .input {
+                    width: 100%;
+                    border: 1px solid #9377C6;
+                    padding: 10px;
+                    font-size: 1rem;
+                    border-radius: 4px;
+
+                    &:focus {
+                        outline: none;
+                        border-color: #9377C6;
+                    }
+                }
+
+                .des-senha {
+                    font-family: vars.$fontMain;
+                    font-weight: vars.$regular;
+                    font-size: 0.75rem; // ~12px
+                    color: #666;
+                    margin-top: 4px;
+                    display: inline-block;
+                }
+            }
+
+            // Para os grupos de campos lado a lado
+            .form-3,
+            .form-2,
+            .form-4 {
+                display: flex;
+                gap: 30px;
+
+                .form-control {
+                    flex: 1;
+                }
+
+                .input-container {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    .input {
+                        padding-right: 40px; // espaço para o ícone
+                    }
+
+                    .input-icon {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .info-and-checkbox{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        // Texto de campos obrigatórios e termos
+        .info-obrigatorios {
+            display: flex;
+            @include vars.toRem(12px);
+            color: #666;
+            margin-bottom: 10px;
+
+            span {
+                color: #9377C6;
+                font-weight: bold;
+            }
+        }
+
+        .terms-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+
+            input[type="checkbox"] {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                accent-color: #9377C6; // Cor definida para a checkbox
+            }
+
+            label {
+                font-size: 0.875rem;
+                color: #666;
+
+                a {
+                    color: #9377C6;
+                    text-decoration: underline;
+                    text-decoration-thickness: 2px;
+
+                    &:hover {
+                        
+                    }
+                }
+            }
+        }
+
+        .info-termos {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 10px;
+
+            a {
+                color: #9377C6;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .warning {
+            color: #F5556F; // vermelho
+            font-size: 0.875rem;
+            margin: 20px 0 20px 0;
+            text-align: end;
+        }
+
+        // Botão de Salvar
+        .actions {
+            text-align: right;
+
+            .btn-save {
+                background-color: #9377C6;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 20px 60px;
+                font-size: 1rem;
+                font-weight: vars.$bold;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

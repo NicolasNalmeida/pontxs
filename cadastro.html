@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/theme.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container flex-header">
@@ -30,7 +35,7 @@
                     <i class="bi bi-search"></i>
                 </button>
             </form>
-            
+
             <button class="saldo">
                 <span>Saldo</span>
                 <span class="count">6</span>
@@ -68,10 +73,111 @@
             <i class="bi bi-search"></i>
         </button>
     </form>
-    <main>
-        
+    <main class="page-cadastro container">
+        <section class="cadastro">        
+            <div class="cadastro-header">
+                <h1>Cadastro</h1>
+                <nav class="breadcrumb">
+                    <a href="#">Home</a> >
+                    <a href="#">Cadastro</a>
+                </nav>
+            </div>
+
+            <!-- Grupo de campos: Dados Pessoais -->
+            <div class="form-default">
+                <h2>Dados Pessoais</h2>
+
+                <div class="form-control">
+                    <label for="name" class="label">Nome <span class="required">*</span></label>
+                    <input class="input" type="text" name="nome" id="nome" placeholder="Nome">
+                </div>
+
+                <div class="form-3">
+                    <div class="form-control">
+                        <label for="cpf" class="label">CPF <span class="required">*</span></label>
+                        <input class="input" type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
+                    </div>
+                    <div class="form-control">
+                        <label for="dob" class="label">Data de Nascimento <span class="required">*</span></label>
+                        <input class="input" type="date" name="dob" id="dob">
+                    </div>
+                    <div class="form-control">
+                        <label for="gender" class="label">Sexo <span class="required">*</span></label>
+                        <select class="input" name="gender" id="gender">
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="email" class="label">E-mail <span class="required">*</span></label>
+                    <input class="input" type="email" name="email" id="email" placeholder="Insira o seu e-mail">
+                </div>
+
+                <div class="form-2">
+                    <div class="form-control">
+                        <label for="password" class="label">Sua senha <span class="required">*</span></label>
+                        <div class="input-container">
+                            <input class="input" type="password" name="password" id="password"
+                                placeholder="xxxxxxxxxxx">
+                        </div>
+                        <small class="des-senha">A senha deve ter no mínimo 8 caracteres.</small>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="confirm-password" class="label">Confirmar Senha <span
+                                class="required">*</span></label>
+                        <div class="input-container">
+                            <input class="input" type="password" name="confirm-password" id="confirm-password"
+                                placeholder="xxxxxxxxxxx">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grupo de campos: Telefones -->
+            <div class="form-default">
+                <h2>Telefones</h2>
+                <div class="form-4">
+                    <div class="form-control">
+                        <label for="celular" class="label">Celular <span class="required">*</span></label>
+                        <input class="input" type="text" name="celular" id="celular" placeholder="(xx) 00000-0000">
+                    </div>
+                    <div class="form-control">
+                        <label for="telefone" class="label">Telefone</label>
+                        <input class="input" type="text" name="telefone" id="telefone" placeholder="(xx) 00000-0000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linha com info obrigatórios à esquerda e checkbox à direita -->
+            <div class="info-and-checkbox">
+                <div class="info-obrigatorios">
+                    Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                </div>
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="terms" name="terms" />
+                    <label for="terms">
+                        Li e aceito o <a href="#">Regulamento</a> e <a href="#">Termos de Uso</a>.
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botão de Salvar -->
+            <div class="actions">
+                <button type="submit" class="btn-save">Salvar</button>
+            </div>
+
+            <!-- Mensagem de alerta -->
+            <p class="warning">
+                Para salvar, você precisa preencher os dados obrigatórios
+            </p>
+        </section>
     </main>
     <footer></footer>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
