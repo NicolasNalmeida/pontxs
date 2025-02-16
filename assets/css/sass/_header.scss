@@ -111,11 +111,45 @@
             .separator { color: #9377C6; }
 
             .user-info {
+                position: relative;
+                cursor: pointer;
                 @include vars.flexProp(
                     (display, flex),
                     (align-items, center)
                 );
                 img { width: 35px; margin-left: 5px; }
+
+                .drop-user {
+                    position: absolute;
+                    top: -600%;
+                    right: 0;
+                    width: 300px;
+                    padding: 10px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border-bottom: 5px solid #7c64aa;
+                    transition: .3s;
+                    z-index: 1;
+                    @include vars.flexProp(
+                        (display, flex),
+                        (flex-direction, column),
+                        (align-items, center)
+                    );
+
+                    a {
+                        text-decoration: none;
+                        margin: 10px 0;
+                        transition: .3s;
+
+                        &:hover { font-weight: vars.$bold; }
+                    }
+                }
+
+                &:hover {
+                    .drop-user {
+                        top: 100%;
+                    }
+                }
             }
 
             @media(max-width: vars.$bp992) {
