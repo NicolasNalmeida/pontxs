@@ -16,11 +16,11 @@ function stepOne(hide, show) {
 }
 
 function modal(status) {
-    var modal = document.querySelector('.modal');
-    var close = document.querySelector('.close');
-    var textMessage = document.querySelector('.modal .content .message');
+    var modal = document.querySelector('.modal')
+    var close = document.querySelector('.close')
+    var textMessage = document.querySelector('.modal .content .message')
     
-    var arr = [];    
+    var arr = []
 
     if (status === true) {
         arr = [
@@ -48,27 +48,43 @@ function modal(status) {
             '<p>Temos o compromisso com a privacidade, segurança e a qualidade nos produtos e serviços prestados para os participantes durante toda experiência de premiação em nosso site.</p>',
             '<p>Seus dados cadastrais não serão vendidos, trocados ou divulgados para terceiros, exceto quando essas informações são necessárias para o processo de entrega.</p>',
             '<p>Suas informações são essenciais para recebimento da premiação, na sua casa, com segurança e dentro do prazo proposto de entrega. Caso existam alterações na nossa politica de privacidade você será informado através de e-mails ou neste espaço.</p>',
-        ];
-        modal.classList.add('politica');
+        ]
+        modal.classList.add('politica')
     }
     
     textMessage.innerHTML = arr.join(' ');
-    modal.classList.add('show');
+    modal.classList.add('show')
     
     close.addEventListener('click', function() {
-        modal.classList.remove('show');
+        modal.classList.remove('show')
     });
 }
 
 function modalFirstAccess() {
-    var modal = document.querySelector('.modal-first-access');
-    var close = document.querySelector('.modal-first-access .close');
+    var modal = document.querySelector('.modal-first-access')
+    var close = document.querySelector('.modal-first-access .close')
 
     console.log(modal)    
 
     modal.classList.add('show');
     
     close.addEventListener('click', function() {
-        modal.classList.remove('show');
+        modal.classList.remove('show')
     });
+}
+
+function openCloseMenu(action) {
+    var menuContent = document.querySelector('.menu')
+
+    if (action === 'open') {
+        menuContent.classList.add('show')
+    } else if (action === 'close') {
+        menuContent.classList.remove('show')
+    }
+}
+
+function openCloseDropdown(item) {
+    var dropContent = item.closest('.link-item').nextElementSibling
+
+    dropContent.classList.toggle('open')
 }
