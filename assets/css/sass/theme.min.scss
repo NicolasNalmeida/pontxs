@@ -4,7 +4,12 @@
 
 //pages
 @use "login";
+<<<<<<< HEAD
 @use "cadastro";
+=======
+@use "wishlist";
+>>>>>>> 9dfb12530c076616493adb2fb47b571b70145691
 
 // organisms
 @use "header";
+@use "footer";

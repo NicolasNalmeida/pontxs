@@ -147,6 +147,122 @@
 
 }
 
+.menu {
+    background-color: #F6F6F6;
+    padding: 30px 0;
+
+    .menu-list {
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, center)
+        );
+
+        .close-item {
+            display: none;
+        }
+
+        .item-menu {
+            margin-right: 40px;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #303030;
+                background-color: #eee;
+                padding: 6px 30px;
+                border-radius: 30px;
+                transition: .3s;
+
+                &.selected {
+                    background-color: #9377C6;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #7c64aa;
+                    }
+                }
+
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+
+            @media(max-width: vars.$bp1200) { margin-right: 10px; }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media(max-width: vars.$bp992) {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: #9377c6;
+        z-index: 1;
+        transition: .3s;
+
+        &.show {
+            left: 0%;
+        }
+
+        .menu-list {
+            margin-top: 50px;
+            width: 100%;
+
+            @include vars.flexProp(
+                (flex-direction, column),
+                (align-items, flex-start)
+            );
+
+            .close-item {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+                a {
+                    color: #fff;
+                    @include vars.toRem(20px);
+                    cursor: pointer;
+                }
+            }
+
+            .item-menu {
+                margin-right: 0;
+                width: 100%;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    border-radius: 0;
+                    background-color: #9377c6;
+                    color: #fff;
+                    width: 100%;
+                    padding: 10px 20px;
+
+                    @include vars.flexProp(
+                        (display, flex),
+                        (align-items, center),
+                        (justify-content, space-between)
+                    );
+
+                    &.selected {
+                        background-color: #bb9ef1;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 .saldo-mobile {
     background-color: #9377C6;
     padding: 20px 0;
