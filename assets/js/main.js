@@ -88,3 +88,14 @@ function openCloseDropdown(item) {
 
     dropContent.classList.toggle('open')
 }
+
+(function slickInitBanners(){
+    $('.banner-main').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle"></i></button>',
+    });
+})()
