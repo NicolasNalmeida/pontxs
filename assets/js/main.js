@@ -133,4 +133,39 @@ function openCloseDropdown(item) {
             }
         ]
     })
+
+    $('.slick-filter').slick({
+        infinite: false,
+        dots: false,
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 610,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    })
 })()

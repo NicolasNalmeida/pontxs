@@ -1,6 +1,8 @@
 @use "vars";
 
 .home {
+    background-color: #ECECEC;
+
     .banner-main {
         position: relative;
 
@@ -54,6 +56,10 @@
         }
     }
 
+    .category-content {
+        background-color: #fff;
+    }
+
     .carousel-category {
         position: relative;
         padding: 50px 0;
@@ -88,6 +94,79 @@
 
             .category-cap {
                 margin-top: 20px;
+            }
+        }
+    }
+
+    .filter-score {
+        padding: 50px 0;
+
+        .title {
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+
+            &::after {
+                content: "";
+                position: relative;
+                width: 180px;
+                height: 3px;
+                display: block;
+                border-radius: 5px;
+                background-color: #9377C6;
+                top: 17px;
+            }
+        }
+
+        .slick-filter {
+            .slick-arrow {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                z-index: 1;
+                border: none;
+                background-color: transparent;
+                color: #9377C6;
+                @include vars.prefix(transform, translateY(-50%));
+                @include vars.toRem(40px);
+
+                &.slick-disabled {
+                    color: #E2DFDF;
+                    cursor: initial;
+                }
+            }
+            
+            .slick-prev { left: -3%; }
+            .slick-next { right: -3%; }
+
+            @media(max-width: vars.$bp768) {
+                .slick-prev { left: 70%; }
+                .slick-next { right: 0%; }
+
+                .slick-arrow {
+                    top: -120%;
+                    @include vars.prefix(transform, initial);
+                    @include vars.toRem(30px);
+                }
+            }
+        }
+
+        .score-item {
+            border: 1px solid #9377C6;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            margin: 0 10px;
+            color: #555555;
+
+            span {
+                color: #9377C6;
+                border-bottom: 1px solid #9377C6;
+                display: block;
+                padding-bottom: 5px;
+                margin-bottom: 8px;
             }
         }
     }
