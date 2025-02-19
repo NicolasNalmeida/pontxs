@@ -2,6 +2,27 @@
 
 .home {
     background-color: #ECECEC;
+    color: #555555;
+
+    h1 { @include vars.toRem(20px); }
+
+    .title {
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+
+        &::after {
+            content: "";
+            position: relative;
+            width: 155px;
+            height: 3px;
+            display: block;
+            border-radius: 5px;
+            background-color: #9377C6;
+            top: 17px;
+        }
+    }
 
     .banner-main {
         position: relative;
@@ -101,24 +122,6 @@
     .filter-score {
         padding: 50px 0;
 
-        .title {
-            position: relative;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-
-            &::after {
-                content: "";
-                position: relative;
-                width: 180px;
-                height: 3px;
-                display: block;
-                border-radius: 5px;
-                background-color: #9377C6;
-                top: 17px;
-            }
-        }
-
         .slick-filter {
             .slick-arrow {
                 cursor: pointer;
@@ -167,6 +170,49 @@
                 display: block;
                 padding-bottom: 5px;
                 margin-bottom: 8px;
+            }
+        }
+    }
+
+    .product-redeem {
+        .detail-bg {
+            padding: 80px 0 200px;
+            background-color: #9377C6;
+            position: relative;
+            
+            .detail {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            .title-detail {
+                position: relative;
+                color: #fff;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 15px;
+                @include vars.flexProp(
+                    (display, flex),
+                    (justify-content, space-between),
+                    (align-items, center)
+                );
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 240px;
+                    height: 3px;
+                    display: block;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    top: 96%;
+                }
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: vars.$light;
+                }
             }
         }
     }
