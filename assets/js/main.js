@@ -226,4 +226,26 @@ function openCloseDropdown(item) {
             }
         ]
     })
+
+    $('.grid-services').slick({
+        infinite: false,
+        dots: false,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2.2,
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1.2,
+                }
+            }
+        ]
+    })
 })()
