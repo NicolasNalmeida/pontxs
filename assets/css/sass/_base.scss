@@ -311,3 +311,48 @@ html, body {
         @include vars.toRem(16px);
     }
 }
+
+$slider-colors: (
+    'default': #424242,
+    'success': #5cb85c,
+    'primary': #428bca,
+    'info': #5bc0de,
+    'warning': #f0ad4e,
+    'danger': #d9534f
+);
+
+.slider-wrapper {
+    margin-bottom: 40px;
+}
+
+.slider-selection {
+    background: map-get($slider-colors, 'default') !important;
+}
+
+@each $color, $value in $slider-colors {
+    .slider-#{$color} .slider-selection {
+        background-color: $value !important;
+    }
+}
+
+.slider {
+    &.slider-horizontal {
+        width: 100% !important;
+        position: relative;
+
+        .tooltip {
+            position: absolute;
+            bottom: -25px;
+
+            &[style="left: 50%;"] {
+                display: none;
+            }
+        }
+    }
+
+    &-handle {
+        background-color: #424242 !important;
+        background-image: none !important;
+        box-shadow: 1px 1px 24px -2px rgba(0, 0, 0, 0.75) !important;
+    }
+}
