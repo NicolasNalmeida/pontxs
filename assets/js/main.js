@@ -248,4 +248,15 @@ function openCloseDropdown(item) {
             }
         ]
     })
+})();
+
+(function openCategory() {
+    var openFilter = document.querySelectorAll('.open-cat');
+
+    openFilter.forEach(filter => {
+        filter.addEventListener('click', function() {
+            var content = document.getElementById(this.dataset.cat)
+            console.log(content)            
+        })
+    });
 })()
