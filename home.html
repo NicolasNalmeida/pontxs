@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger" onclick="openCloseMenu('open')">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png">
+            </figure>
+
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png">
+
+                    <nav class="drop-user">
+                        <a href="javascript:;">Minha Conta</a>
+                        <a href="javascript:;">Lorem Ipsum</a>
+                        <a href="javascript:;">Lorem Dolor</a>
+                        <a href="javascript:;">Sair</a>
+                    </nav>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="menu-list container">
+            <li class="close-item">
+                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
+            </li>
+            <li class="item-menu">
+                <a class="selected link-item" href="javascript:;">Categorias <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Lojas <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Serviços <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Cartões e Vales <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Doações <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    <main class="home">
+        <section class="banner-main">
+            <picture>
+                <source media="(max-width: 992px)" srcset="https://dummyimage.com/992x768/111/474747&text=+">
+                <img src="https://dummyimage.com/1920x600/111/474747&text=+">
+            </picture>
+            <picture>
+                <source media="(max-width: 992px)" srcset="https://dummyimage.com/992x768/222/474747&text=+">
+                <img src="https://dummyimage.com/1920x600/222/474747&text=+">
+            </picture>
+            <picture>
+                <source media="(max-width: 992px)" srcset="https://dummyimage.com/992x768/333/474747&text=+">
+                <img src="https://dummyimage.com/1920x600/333/474747&text=+">
+            </picture>
+            <picture>
+                <source media="(max-width: 992px)" srcset="https://dummyimage.com/992x768/444/474747&text=+">
+                <img src="https://dummyimage.com/1920x600/444/474747&text=+">
+            </picture>
+        </section>
+        <section class="category-content">
+            <div class="container carousel-category">
+                <figure class="category-item">
+                    <img src="assets/img/cat-1.png">
+                    <figure class="category-cap">Eletrodomésticos</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-2.png">
+                    <figure class="category-cap">Smartphones</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-3.png">
+                    <figure class="category-cap">TV's</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-4.png">
+                    <figure class="category-cap">Eletroportáteis</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-5.png">
+                    <figure class="category-cap">Ventiladores</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-6.png">
+                    <figure class="category-cap">Informática</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-7.png">
+                    <figure class="category-cap">Beleza</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-8.png">
+                    <figure class="category-cap">Áudio</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-1.png">
+                    <figure class="category-cap">Lorem Ipsum 1</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-1.png">
+                    <figure class="category-cap">Lorem Ipsum 2</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-1.png">
+                    <figure class="category-cap">Lorem Ipsum 3</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-1.png">
+                    <figure class="category-cap">Lorem Ipsum 4</figure>
+                </figure>
+                <figure class="category-item">
+                    <img src="assets/img/cat-1.png">
+                    <figure class="category-cap">Lorem Ipsum 5</figure>
+                </figure>
+            </div>
+        </section>
+        <section class="filter-score container">
+            <h1 class="title">Filtre por pontos</h1>
+            <div class="slick-filter">
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+                <div class="score-item">
+                    <span>Até</span>
+                    <p class="score-points"><strong>100</strong> pontos</p>
+                </div>
+            </div>
+        </section>
+        <section class="product-redeem">
+            <div class="detail-bg">
+                <img src="assets/img/image-detail.png" class="detail">
+                <div class="container">
+                    <div class="title-detail">
+                        <h1>Produtos mais resgatados</h1>
+                        <a href="javascript:;">Ver todos <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="products carrossel negative-position">
+                    <div class="spot">
+                        <img src="assets/img/produto-1.png">
+                        <div class="spot-info">
+                            <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                            <div class="spot-redeem">
+                                <div class="redeem-score">
+                                    <span>Resgate por:</span>
+                                    <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                                </div>
+                                <button class="btn">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spot">
+                        <img src="assets/img/produto-2.png">
+                        <div class="spot-info">
+                            <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                            <div class="spot-redeem">
+                                <div class="redeem-score">
+                                    <span>Resgate por:</span>
+                                    <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                                </div>
+                                <button class="btn">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spot">
+                        <img src="assets/img/produto-3.png">
+                        <div class="spot-info">
+                            <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                            <div class="spot-redeem">
+                                <div class="redeem-score">
+                                    <span>Resgate por:</span>
+                                    <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                                </div>
+                                <button class="btn">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spot">
+                        <img src="assets/img/produto-4.png">
+                        <div class="spot-info">
+                            <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                            <div class="spot-redeem">
+                                <div class="redeem-score">
+                                    <span>Resgate por:</span>
+                                    <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                                </div>
+                                <button class="btn">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stores container">
+            <div class="title-detail normal">
+                <h1>Lojas parceiras</h1>
+                <a href="javascript:;">Ver todos <i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="grid-store">
+                <a href="#">
+                    <img src="assets/img/store-1.png">
+                </a>
+                <a href="#">
+                    <img src="assets/img/store-2.png">
+                </a>
+                <a href="#">
+                    <img src="assets/img/store-3.png">
+                </a>
+                <a href="#">
+                    <img src="assets/img/store-4.png">
+                </a>
+                <a href="#">
+                    <img src="assets/img/store-1.png">
+                </a>
+            </div>
+        </section>
+        <section class="service container">
+            <div class="title-detail normal">
+                <h1>Serviços</h1>
+                <a href="javascript:;">Ver todos <i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="grid-services">
+                <a href="#" class="service-item">
+                    <img src="assets/img/service-1.png">
+                </a>
+                <a href="#" class="service-item">
+                    <img src="assets/img/service-2.png">
+                </a>
+                <a href="#" class="service-item">
+                    <img src="assets/img/service-3.png">
+                </a>
+            </div>
+        </section>
+        <section class="cards container">
+            <div class="title-detail normal">
+                <h1>Carões e Vales</h1>
+                <a href="javascript:;">Ver todos <i class="bi bi-chevron-right"></i></a>
+            </div>
+            <div class="products carrossel">
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-2.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-3.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-4.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
+                <img class="logo" src="assets/img/logo.png">
+            </figure>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
