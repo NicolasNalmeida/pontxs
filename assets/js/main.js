@@ -90,164 +90,205 @@ function openCloseDropdown(item) {
 }
 
 (function slickInitBanners(){
-    $('.banner-main').slick({
-        infinite: true,
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle"></i></button>',
-    });
+    if (document.querySelector('.banner-main')) {
+        $('.banner-main').slick({
+            infinite: true,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle"></i></button>',
+        });
+    }
 
-    $('.carousel-category').slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
-        responsive: [
-            {
-                breakpoint: 1201,
-                settings: {
-                    slidesToShow: 6,
+    if (document.querySelector('.carousel-category')) {
+        $('.carousel-category').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 }
-            },
-            {
-                breakpoint: 993,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-        ]
-    })
+            ]
+        })
+    }
 
-    $('.slick-filter').slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
-        responsive: [
-            {
-                breakpoint: 1201,
-                settings: {
-                    slidesToShow: 6,
+    if (document.querySelector('.slick-filter')) {
+        $('.slick-filter').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 610,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 }
-            },
-            {
-                breakpoint: 993,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 610,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-        ]
-    })
+            ]
+        })
+    }
 
-    $('.products.carrossel').slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
-        responsive: [
-            {
-                breakpoint: 1201,
-                settings: {
-                    slidesToShow: 3,
+    if (document.querySelector('.products.carrossel')) {
+        $('.products.carrossel').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1,
+                    }
                 }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    })
+            ]
+        })
+    }
 
-    $('.grid-store').slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
-        responsive: [
-            {
-                breakpoint: 1201,
-                settings: {
-                    slidesToShow: 3,
+    if (document.querySelector('.grid-store')) {
+        $('.grid-store').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1,
+                    }
                 }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    })
+            ]
+        })
+    }
 
-    $('.grid-services').slick({
-        infinite: false,
-        dots: false,
-        arrows: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2.2,
+    if (document.querySelector('.grid-services')) {
+        $('.grid-services').slick({
+            infinite: false,
+            dots: false,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1.2,
+                    }
                 }
-            },
-            {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1.2,
+            ]
+        })
+    }
+
+    if (document.querySelector('.image-thumbnail')) {
+        $('.image-thumbnail').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 }
-            }
-        ]
-    })
+            ]
+        })
+    }
 })();
 
 (function openCategory() {
