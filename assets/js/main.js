@@ -301,7 +301,29 @@ function openCloseDropdown(item) {
             this.classList.toggle('rotate')
         })
     });
-})()
+})();
+
+(function() {
+    var tabItem = document.querySelectorAll('.tab-item');
+    var tabTextContent = document.querySelectorAll('.tab-content-item')
+
+    tabItem.forEach(tab => {
+        tab.addEventListener('click', function() {
+            tabItem.forEach(tabRemove => {
+                tabRemove.classList.remove('selected')
+            });
+            this.classList.add('selected')
+
+            tabTextContent.forEach(content => {
+                content.classList.remove('selected')
+            });
+
+            const contentTab = document.getElementById(this.dataset.id)
+
+            contentTab.classList.add('selected')
+        })
+    });
+})();
 
 $(document).ready(function () {
     $('.input-range').each(function () {

@@ -48,6 +48,8 @@
             .name {
                 @include vars.toRem(16px);
                 display: block;
+                color: #555555;
+                line-height: 18px;
                 font-weight: vars.$regular;
                 border-bottom: 1px solid #eee;
                 padding-bottom: 15px;
