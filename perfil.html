@@ -70,24 +70,70 @@
             <i class="bi bi-search"></i>
         </button>
     </form>
-    <main class="page-cadastro container">
-        <section class="cadastro">
-            <div class="cadastro-header">
-                <h1>Cadastro</h1>
+    <main class="page-perfil container">
+        <article class="perfil">
+            <div class="perfil-header">
+                <h1>Meu Perfil</h1>
                 <nav class="breadcrumb">
                     <a href="#">Home</a> >
-                    <a href="#">Cadastro</a>
+                    <a href="#">Meu Perfil</a>
                 </nav>
             </div>
 
+            <nav role="tablist" class="profile-tabs">
+                <ul>
+                    <li role="tab" aria-selected="true" aria-controls="dados-pessoais">
+                        <a href="#dados-pessoais">
+                            <i class="bi bi-person" aria-label="Ícone de Dados Pessoais"></i>
+                            <span>Dados Pessoais</span>
+                        </a>
+                    </li>
+                    <li role="tab" aria-selected="false" aria-controls="meus-enderecos">
+                        <a href="#meus-enderecos">
+                            <i class="bi bi-house-door" aria-label="Ícone de Endereços Pessoais"></i>
+                            <span>Meus Endereços</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="profile-photo-section">
+                <div class="form-default">
+                    <div class="form-control">
+                        <figure class="profile-photo-preview">
+                            <div class="profile-photo-preview-container">
+                                <img id="profile-image" src="assets/img/user1 (1).png" alt="Foto de perfil do usuário">
+                                <figcaption>
+                                    <button class="btn-change-photo" id="change-photo">Alterar imagem</button>
+                                </figcaption>
+                        </figure>
+                        <div class="profile-photo-upload">
+                            <label for="file-upload" class="file-upload-label">Foto do perfil:</label>
+                            <div class="file-upload-box">
+                                <i class="bi bi-cloud-upload" aria-hidden="true"></i>
+                                <span id="file-upload-description">Arraste ou cole um arquivo aqui ou <br> escolha uma
+                                    opção abaixo:</span>
+                                <input type="file" id="file-upload" accept="image/*"
+                                    aria-label="Upload de foto de perfil" tabindex="-1"
+                                    aria-describedby="file-upload-description">
+                                <div class="upload-buttons-container">
+                                    <button class="btn-upload" id="choose-image">Escolha uma imagem</button>
+                                    <button class="btn-upload" id="take-photo">Tire uma foto</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Grupo de campos: Dados Pessoais -->
-            <div class="form-default">
+            <section class="form-default">
                 <h2>Dados Pessoais</h2>
                 <div class="form-control">
                     <label for="name" class="label">Nome <span class="required">*</span></label>
                     <input class="input" type="text" name="nome" id="nome" placeholder="Nome">
                 </div>
-                <div class="form-2">
+                <div class="form-3">
                     <div class="form-control">
                         <label for="cpf" class="label">CPF <span class="required">*</span></label>
                         <input class="input" type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
@@ -105,10 +151,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-control">
-                    <label for="email" class="label">E-mail <span class="required">*</span></label>
-                    <input class="input" type="email" name="email" id="email" placeholder="Insira o seu e-mail">
-                </div>
                 <div class="form-2">
                     <div class="form-control">
                         <label for="password" class="label">Sua senha <span class="required">*</span></label>
@@ -116,7 +158,7 @@
                             <input class="input" type="password" name="password" id="password"
                                 placeholder="xxxxxxxxxxx">
                         </div>
-                        <small class="des-senha">A senha deve ter no mínimo 8 caracteres.</small>
+                        <small class="des-senha">mínimo 8 caracteres</small>
                     </div>
                     <div class="form-control">
                         <label for="confirm-password" class="label">Confirmar Senha <span
@@ -127,47 +169,53 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- Grupo de campos: Telefones -->
-            <div class="form-default">
+            <section class="form-default">
                 <h2>Telefones</h2>
-                <div class="form-4">
+                <div class="form-3">
                     <div class="form-control">
                         <label for="celular" class="label">Celular <span class="required">*</span></label>
                         <input class="input" type="text" name="celular" id="celular" placeholder="(xx) 00000-0000">
                     </div>
+
                     <div class="form-control">
                         <label for="telefone" class="label">Telefone</label>
                         <input class="input" type="text" name="telefone" id="telefone" placeholder="(xx) 00000-0000">
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Grupo de campo: e-mail -->
+            <section class="form-default">
+                <h2>Outros Dados</h2>
+                <div class="form-4">
+                    <div class="form-control">
+                        <label for="email" class="label">E-mail <span class="required">*</span></label>
+                        <input class="input" type="email" name="email" id="email" placeholder="Insira o seu e-mail">
+                    </div>
+                </div>
+            </section>
 
             <!-- Linha com info obrigatórios e checkbox -->
-            <div class="info-and-checkbox">
+            <section class="info-and-checkbox">
                 <div class="info-obrigatorios">
                     Campos com <span>*</span> possuem campo de preenchimento obrigatório
                 </div>
                 <div class="terms-checkbox">
-                    <input type="checkbox" id="terms" name="terms" />
-                    <label for="terms">
-                        Li e aceito o <a href="#">Regulamento</a> e <a href="#">Termos de Uso</a>.
-                    </label>
+                    <a href="#">Regulamento</a> e <a href="#">Termos de Uso</a>.
                 </div>
-            </div>
+            </section>
 
             <!-- Botão de Salvar -->
             <div class="actions">
                 <button type="submit" class="btn-save">Salvar</button>
             </div>
 
-            <!-- Mensagem de alerta -->
-            <p class="warning">
-                Para salvar, você precisa preencher os dados obrigatórios
-            </p>
-        </section>
+        </article>
     </main>
+
     <footer class="footer">
         <nav class="nav-footer">
             <div class="container">

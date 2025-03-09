@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pontxs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png" alt="Logo">
+            </figure>
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png" alt="Usuário">
+                </figure>
+            </div>
+        </div>
+    </header>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    <main class="page-perfil container">
+        <article class="perfil">
+            <div class="perfil-header">
+                <h1>Meu Perfil</h1>
+                <nav class="breadcrumb">
+                    <a href="#">Home</a> >
+                    <a href="#">Meu Perfil</a>
+                </nav>
+            </div>
+
+            <nav role="tablist" class="profile-tabs">
+                <ul>
+                    <li role="tab" aria-selected="true" aria-controls="dados-pessoais">
+                        <a href="#dados-pessoais">
+                            <i class="bi bi-person" aria-label="Ícone de Dados Pessoais"></i>
+                            <span>Dados Pessoais</span>
+                        </a>
+                    </li>
+                    <li role="tab" aria-selected="false" aria-controls="meus-enderecos">
+                        <a href="#meus-enderecos">
+                            <i class="bi bi-house-door" aria-label="Ícone de Endereços Pessoais"></i>
+                            <span>Meus Endereços</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Novo Grupo de campos: Endereços -->
+            <div class="form-default">
+                <h2>Endereços</h2>
+                <div class="form-2">
+                    <div class="form-control">
+                        <label for="logradouro" class="label">Endereço<span class="required">*</span></label>
+                        <input class="input" type="text" name="logradouro" id="logradouro" placeholder="Rua, Av.">
+                    </div>
+                    <div class="form-control">
+                        <label for="numero" class="label">Número <span class="required">*</span></label>
+                        <input class="input" type="text" name="numero" id="numero" placeholder="Número">
+                    </div>
+                </div>
+                <div class="form-2">
+                    <div class="form-control">
+                        <label for="complemento" class="label">Complemento</label>
+                        <input class="input" type="text" name="complemento" id="complemento" placeholder="Complemento">
+                    </div>
+                    <div class="form-control">
+                        <label for="bairro" class="label">Bairro <span class="required">*</span></label>
+                        <input class="input" type="text" name="bairro" id="bairro" placeholder="Bairro">
+                    </div>
+                </div>
+                <div class="form-3">
+                    <div class="form-control">
+                        <label for="cidade" class="label">Cidade <span class="required">*</span></label>
+                        <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
+                    </div>
+                    <div class="form-control">
+                        <label for="estado" class="label">Estado <span class="required">*</span></label>
+                        <input class="input" type="text" name="estado" id="estado" placeholder="Estado">
+                    </div>
+                    <div class="form-control">
+                        <label for="cep" class="label">CEP <span class="required">*</span></label>
+                        <input class="input" type="text" name="cep" id="cep" placeholder="00000-000">
+                    </div>
+                </div>
+                <div class="info-and-checkbox">
+                    <div class="info-obrigatorios">
+                        Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                    </div>
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" />
+                        <label for="terms">
+                            Endereço Principal
+                        </label>
+                    </div>
+                </div>
+                <!-- Botão de Salvar -->
+                <div class="actions">
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </div>
+            <!-- Novo Grupo de campos: Endereços -->
+            <div class="form-default">
+                <h2>Endereços</h2>
+                <div class="form-2">
+                    <div class="form-control">
+                        <label for="logradouro" class="label">Endereço<span class="required">*</span></label>
+                        <input class="input" type="text" name="logradouro" id="logradouro" placeholder="Rua, Av.">
+                    </div>
+                    <div class="form-control">
+                        <label for="numero" class="label">Número <span class="required">*</span></label>
+                        <input class="input" type="text" name="numero" id="numero" placeholder="Número">
+                    </div>
+                </div>
+                <div class="form-2">
+                    <div class="form-control">
+                        <label for="complemento" class="label">Complemento</label>
+                        <input class="input" type="text" name="complemento" id="complemento" placeholder="Complemento">
+                    </div>
+                    <div class="form-control">
+                        <label for="bairro" class="label">Bairro <span class="required">*</span></label>
+                        <input class="input" type="text" name="bairro" id="bairro" placeholder="Bairro">
+                    </div>
+                </div>
+                <div class="form-3">
+                    <div class="form-control">
+                        <label for="cidade" class="label">Cidade <span class="required">*</span></label>
+                        <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
+                    </div>
+                    <div class="form-control">
+                        <label for="estado" class="label">Estado <span class="required">*</span></label>
+                        <input class="input" type="text" name="estado" id="estado" placeholder="Estado">
+                    </div>
+                    <div class="form-control">
+                        <label for="cep" class="label">CEP <span class="required">*</span></label>
+                        <input class="input" type="text" name="cep" id="cep" placeholder="00000-000">
+                    </div>
+                </div>
+                <div class="info-and-checkbox">
+                    <div class="info-obrigatorios">
+                        Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                    </div>
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" />
+                        <label for="terms">Endereço Principal</label>
+                    </div>                    
+                </div>
+                <!-- Botão de Salvar -->
+                <div class="actions">
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">
+                    Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do
+                    pedido.
+                </figcaption>
+                <img class="logo" src="assets/img/logo.png" alt="Logo">
+            </figure>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

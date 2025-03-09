@@ -1,13 +1,13 @@
 @use 'vars';
 
-.page-cadastro {
+.page-perfil {
     padding: 20px 0;
 
-    .cadastro {
+    .perfil {
         margin: 0 auto;
         max-width: 900px;
 
-        .cadastro-header {
+        .perfil-header {
             margin-bottom: 30px;
             border-bottom: 1px solid #D9D9D9;
 
@@ -180,7 +180,7 @@
 
                 .form-2,
                 .form-4 {
-                    @include vars.flexProp((flex-direction, column));
+                    flex-direction: column;
                     gap: 15px;
                 }
             }
@@ -238,13 +238,6 @@
                     text-decoration: underline;
                 }
             }
-        }
-
-        .warning {
-            color: #F5556F;
-            @include vars.toRem(14px);
-            margin: 20px 0;
-            text-align: end;
         }
 
         .actions {
@@ -350,40 +343,54 @@
                 }
             }
 
-            // Empilhar info e checkbox
-            .info-and-checkbox {
-                @include vars.flexProp((display, flex), (flex-direction, column), (align-items, flex-start));
-                gap: 10px;
+        }
 
-                .terms-checkbox {
+        // Empilhar info e checkbox
+        .info-and-checkbox {
+            @include vars.flexProp((display, flex), (flex-direction, column), (align-items, flex-start));
+            gap: 10px;
 
-                    label {
-                        @include vars.toRem(12px);
-                        color: #666;
+            .terms-checkbox {
+                @include vars.flexProp((display, flex), (align-items, center));
+                gap: 8px;
+
+                input[type="checkbox"] {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    accent-color: #9377C6;
+                }
+
+                label {
+                    @include vars.toRem(14px);
+                    color: #666;
+
+                    a {
+                        color: #9377C6;
+                        text-decoration: underline;
+                        text-decoration-thickness: 2px;
+
+                        &:hover {
+                            // Sem alterações adicionais
+                        }
                     }
                 }
-
-                .info-obrigatorios {
-                    white-space: normal;
-                    padding-left: 0;
-                    @include vars.toRem(10px);
-                }
             }
 
-            .warning {
-                text-align: left;
-                margin: 10px 0;
-                @include vars.toRem(11px);
+            .info-obrigatorios {
+                white-space: normal;
+                padding-left: 0;
+                @include vars.toRem(10px);
             }
+        }
+        
+        .actions {
+            text-align: center;
 
-            .actions {
-                text-align: center;
-
-                .btn-save {
-                    padding: 15px 40px;
-                    @include vars.toRem(14px);
-                    width: 100%;
-                }
+            .btn-save {
+                padding: 15px 40px;
+                @include vars.toRem(14px);
+                width: 100%;
             }
         }
     }
