@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Pagamento de Contas</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,72 +132,59 @@
                 <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Ar e Ventilação</a> <i class="bi bi-chevron-right"></i> <span>Ventilador de Mesa</span>
             </nav>
 
-            <h1 class="title">Recarga de Celular</h1>
+            <h1 class="title">Pagamento de Contas</h1>
             <picture>
                 <source media="(max-width: 768px)" srcset="https://dummyimage.com/768x450/000/fff">
-                <img class="banner-resgate" src="assets/img/banner-resgate.png">
+                <img class="banner-resgate" src="assets/img/banner-pagamento.png">
             </picture>
 
             <form class="recarga">
                 <div class="flex-recarga">
                     <div class="form-content">
                         <div class="form-group">
-                            <label>Operadora:</label>
+                            <label>Tipo de conta:</label>
                             <select class="select">
                                 <option>Selecione</option>
-                                <option value="Tim">Tim</option>
-                                <option value="Vivo">Vivo</option>
-                                <option value="Claro">Claro</option>
+                                <option value="Luz">Luz</option>
+                                <option value="Água">Água</option>
+                                <option value="Internet">Conta de Telefone e Internet</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>(DDD) Número do celular:</label>
-                            <input type="text" class="input" placeholder="Insira o número de celular">
-                        </div>
-                        <div class="form-group">
-                            <label>Valor da Recarga:</label>
-                            <select class="select">
-                                <option>Selecione</option>
-                                <option value="10">R$10,00</option>
-                                <option value="20">R$20,00</option>
-                                <option value="30">R$30,00</option>
-                                <option value="40">R$40,00</option>
-                                <option value="50">R$50,00</option>
-                                <option value="60">R$60,00</option>
-                                <option value="70">R$70,00</option>
-                                <option value="80">R$80,00</option>
-                                <option value="90">R$90,00</option>
-                                <option value="100">R$100,00</option>
-                            </select>
+                            <label>Código de barras:</label>
+                            <input type="text" class="input" placeholder="Insira o Código">
                         </div>
                         <div class="redeem">
                             <label>Resgate por:</label>
                             <div class="points">
                                 <i class="bi bi-database"></i>
-                                <p><strong>20</strong> pontos</p>
+                                <p><strong>150</strong> pontos</p>
                             </div>
                         </div>
                     </div>
                     <div class="resume">
-                        <h3>Resumo da recarga:</h3>
+                        <h3>Resumo do pagamento:</h3>
                         <div class="resume-content">
                             <div class="resume-label">
-                                <label>Operadora:</label> <p>Vivo</p>
+                                <label>Tipo de conta:</label> <p>Conta de Telefone e Internet</p>
                             </div>
                             <div class="resume-label">
-                                <label>Celular:</label> <p>(11) 97170-8188</p>
+                                <label>Favorecido:</label> <p>XXXXXXXXXXXX XXXXXXXXXXXXXX XXXXXXXXXX</p>
                             </div>
                             <div class="resume-label">
-                                <label>Valor da recarga:</label> <p>R$ 15,00</p>
+                                <label>Valor da conta:</label> <p>R$ 130,80</p>
+                            </div>
+                            <div class="resume-label">
+                                <label>Vencimento:</label> <p>15/03/2025</p>
                             </div>
                             <div class="resume-label points-finish">
-                                <label>Pontos Utilizados:</label> <p>20 pontos</p>
+                                <label>Pontos Utilizados:</label> <p>150 pontos</p>
                             </div>
                             <div class="terms">
                                 <input type="checkbox" class="check" id="check">
                                 <label for="check">Li e aceito o <a href="#">Termo de uso</a></label>
                             </div>
-                            <button class="finish-btn">Finalizar resgate</button>
+                            <button class="finish-btn">Finalizar pagamento</button>
                         </div>
                     </div>
                 </div>

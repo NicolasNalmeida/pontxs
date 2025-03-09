@@ -65,7 +65,8 @@
                 border-radius: 10px;
 
                 .resume-label {
-                    width: 70%;
+                    width: 100%;
+                    margin-bottom: 10px;
                     @include vars.flexProp(
                         (display, flex),
                         (justify-content, space-between),
@@ -76,12 +77,14 @@
                         font-weight: vars.$bold;
                     }
 
-                    label, p {
-                        width: 50%;
+                    label {
+                        width: 35%;
                         color: #555555;
                         margin-bottom: 10px;
-                        @include vars.toRem(20px);
+                        @include vars.toRem(16px);
                     }
+
+                    p { width: 60%; }
                 }
 
                 .points-finish {
