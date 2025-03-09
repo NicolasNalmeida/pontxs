@@ -10,105 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <style>
+        .links-site {
+            padding: 80px 0;
+        }
+
+        .lista-links {
+            margin-top: 40px;
+        }
+
+        .lista-links li a {
+            padding: 15px;
+            background-color: #222;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            width: 10%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="container flex-header">
-            <figure class="logo">
-                <button class="hamburger" onclick="openCloseMenu('open')">
-                    <span class="hm"></span>
-                    <span class="hm"></span>
-                    <span class="hm"></span>
-                </button>
-                <img src="assets/img/logo-completo.png">
-            </figure>
-
-            <form class="search">
-                <input class="search-input" type="text" placeholder="O que você Procura?">
-                <button class="search-btn">
-                    <i class="bi bi-search"></i>
-                </button>
-            </form>
-            
-            <button class="saldo">
-                <span>Saldo</span>
-                <span class="count">6</span>
-            </button>
-
-            <div class="user-action">
-                <button class="fav-button">
-                    <i class="bi bi-suit-heart-fill"></i>
-                </button>
-                <span class="separator">|</span>
-                <button class="cart-button">
-                    <i class="bi bi-bag-dash-fill"></i>
-                </button>
-                <figure class="user-info">
-                    <i class="bi bi-chevron-down"></i>
-                    <img src="assets/img/user.png">
-                </figure>
-            </div>
-        </div>
-    </header>
-    <nav class="menu">
-        <ul class="menu-list container">
-            <li class="close-item">
-                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
-            </li>
-            <li class="item-menu">
-                <a class="selected" href="javascript:;">Categorias <i class="bi bi-chevron-down"></i></a>
-            </li>
-            <li class="item-menu">
-                <a href="javascript:;">Lojas <i class="bi bi-chevron-down"></i></a>
-            </li>
-            <li class="item-menu">
-                <a href="javascript:;">Serviços <i class="bi bi-chevron-down"></i></a>
-            </li>
-            <li class="item-menu">
-                <a href="javascript:;">Cartões e Vales <i class="bi bi-chevron-down"></i></a>
-            </li>
-            <li class="item-menu">
-                <a href="javascript:;">Doações <i class="bi bi-chevron-down"></i></a>
-            </li>
-        </ul>
-    </nav>
-    <div class="saldo-mobile">
-        <div class="container flex">
-            <div class="saldo-mb">
-                <i class="icon bi bi-database"></i>
-                <span>Saldo</span>
-            </div>
-            <div class="count">
-                <span>6</span> pontos
-            </div>
-        </div>
-    </div>
-    <form class="search-mobile container">
-        <input class="search-input" type="text" placeholder="O que você Procura?">
-        <button class="search-btn">
-            <i class="bi bi-search"></i>
-        </button>
-    </form>
-    <main class="home">
-
-    </main>
-    <footer class="footer">
-        <nav class="nav-footer">
-            <div class="container">
-                <a href="#">Sobre a Campanha</a>
-                <a href="#">Regulamento</a>
-                <a href="#">Dúvidas Frequentes</a>
-                <a href="#">Fale Conosco</a>
-            </div>
-        </nav>
-        <div class="down-footer">
-            <figure class="container flex">
-                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
-                <img class="logo" src="assets/img/logo.png">
-            </figure>
-        </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+<body class="container links-site">
+    <h1>Menu de Páginas</h1>
+    <ul class="lista-links">
+        <li>
+            <a href="login.html">Login</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="home.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="product.html">Produto</a>
+        </li>
+    </ul>
 </body>
 </html>

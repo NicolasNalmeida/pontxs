@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Ventilador de Mesa 40cm Super Power Mondial Preto/Prata 140W VSP-40-B</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger" onclick="openCloseMenu('open')">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png">
+            </figure>
+
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png">
+
+                    <nav class="drop-user">
+                        <a href="javascript:;">Minha Conta</a>
+                        <a href="javascript:;">Lorem Ipsum</a>
+                        <a href="javascript:;">Lorem Dolor</a>
+                        <a href="javascript:;">Sair</a>
+                    </nav>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="menu-list container">
+            <li class="close-item">
+                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
+            </li>
+            <li class="item-menu">
+                <a class="selected link-item" href="javascript:;">Categorias <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Lojas <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Serviços <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Cartões e Vales <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Doações <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    
+    <main class="product">
+        <section class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Ar e Ventilação</a> <i class="bi bi-chevron-right"></i> <span>Ventilador de Mesa</span>
+            </nav>
+            <div class="product-content">
+                <div class="product-name">
+                    <h1 class="name">Ventilador de Mesa 40cm Super Power Mondial Preto/Prata 140W VSP-40-B</h1>
+                    <span class="cod">(Cód. Item 55066620) Vendido e entregue por <strong>Casas Bahia</strong></span>
+                </div>
+            </div>
+
+            <div class="product-columns">
+                <div class="half-image">
+                    <div class="image-highlight">
+                        <img src="assets/img/page-product/1.png">
+                    </div>
+                    <div class="image-thumbnail">
+                        <img src="assets/img/page-product/1.png">
+                        <img src="assets/img/page-product/2.png">
+                        <img src="assets/img/page-product/3.png">
+                        <img src="assets/img/page-product/1.png">
+                        <img src="assets/img/page-product/2.png">
+                        <img src="assets/img/page-product/3.png">
+                    </div>
+                </div>
+                <div class="half-infos">
+                    <div class="variations">
+                        <div class="step-vars first">
+                            <label>Selecione cor:</label>
+                            <div class="flex-var">
+                                <button class="color selected">
+                                    <img src="assets/img/black.jpg">
+                                </button>
+                                <button class="color">
+                                    <img src="assets/img/white.jpg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-vars second">
+                            <label>Cor das pás:</label>
+                            <div class="flex-var">
+                                <button class="var-btn selected">
+                                    Prata
+                                </button>
+                                <button class="var-btn">
+                                    Cinza
+                                </button>
+                                <button class="var-btn">
+                                    Azul
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-vars third">
+                            <label>Escolha a voltagem:</label>
+                            <div class="flex-var">
+                                <button class="var-btn selected">
+                                    110v
+                                </button>
+                                <button class="var-btn">
+                                    120v
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-vars redeem">
+                            <label>Resgatar por:</label>
+                            <div class="redeem-content">
+                                <div class="points">
+                                    <i class="bi bi-database"></i>
+                                    <p><strong>195</strong> pontos</p>
+                                </div>
+                                <button class="cut-points">230 pontos</button>
+                            </div>
+                            <div class="buy-content">
+                                <div class="qty-content">
+                                    <button class="minus"></button>
+                                    <input type="text" class="qty" value="1">
+                                    <button class="plus"></button>
+                                </div>
+                                <div class="btn-content">
+                                    <button class="add-bag">Adicionar à sacola</button>
+                                    <button class="redeem-btn" onclick="openBuyModal()">Resgatar agora</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-shipping">
+                            <div class="flex-shipping">
+                                <strong>Calcule o frete e prazo de entrega</strong>
+                                <div class="shipping-input">
+                                    <input type="text" class="cep" placeholder="00000-000">
+                                    <button class="consult">Consultar</button>
+                                </div>
+                            </div>
+                            <p class="address">Rua Antônio Gomes Ferreira - Parque Fongaro<br> Entrega em até <strong>27 de Março</strong> por <strong>8 pontos</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <nav class="nav-tabs">
+                    <button class="tab-item selected" data-id="description">
+                        Descrição do Produto
+                    </button>
+                    <button class="tab-item" data-id="techSpecs">
+                        Especificações Técnicas
+                    </button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-content-item selected"  id="description">
+                        <p>Ventilação eficiente em todo o ambiente<br> O ventilador Mondial combina um design aerodinâmico de alta performance, que proporciona maior intensidade do vento e melhor distribuição de ar, com um sistema de ventilação silencioso, garantindo uma ventilação eficiente em todo o ambiente e assegurando noites de sono tranquilas e confortáveis, sem ruídos incômodos.</p>
+                        <p>Direcionamento perfeito do fluxo de ar<br> Equipado com um sistema oscilante horizontal, o ventilador amplia o raio de alcance do vento no ambiente, oferecendo uma distribuição de ar mais abrangente e eficiente. Além disso, possui inclinação vertical ajustável, permitindo um direcionamento ideal do fluxo de ar conforme a sua necessidade.</p>
+                        <p>Ajuste personalizado de velocidade<br> As três opções de velocidade possibilitam ajustar a intensidade do vento às suas preferências e necessidades específicas, oferecendo um uso personalizado e confortável.</p>
+                        <p>Praticidade para seu dia a dia<br> A hélice e as grades removíveis tornam a limpeza do ventilador mais fácil, simplificando a lavagem e a remoção da poeira, garantindo um equipamento sempre limpo e higienizado.</p>
+                    </div>
+
+                    <div class="tab-content-item" id="techSpecs">
+                        <p><b>Nome da marca</b> MONDIAL</p>
+                        <p><b>Fabricante</b> Mondial</p>
+                        <p><b>Modelo</b> 3798-01</p>
+                        <p><b>Cor</b> Preto</p>
+                        <p><b>Registro no Inmetro</b> UL-BR 24.0820</p>
+                        <p><b>Nome do modelo</b> Ventilador de Mesa 40cm Super Power Mondial Preto/Prata 140W VSP-40-B</p>
+                        <p><b>Número da peça</b> NVT-40-8P-B</p>
+                        <p><b>Características especiais</b> Grade removível, Inclinação ajustável</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards container">
+            <div class="title-detail normal">
+                <h1>Acreditamos que você pode gostar</h1>
+            </div>
+            <div class="products carrossel">
+                <div class="spot">
+                    <img src="assets/img/card-5.png">
+                    <div class="spot-info">
+                        <strong class="name">Ventilador de Mesa 40cm Mondial Turbo VT40NB com 8 Pás...</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-5.png">
+                    <div class="spot-info">
+                        <strong class="name">Ventilador de Mesa 40cm Mondial Turbo VT40NB com 8 Pás...</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-5.png">
+                    <div class="spot-info">
+                        <strong class="name">Ventilador de Mesa 40cm Mondial Turbo VT40NB com 8 Pás...</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-5.png">
+                    <div class="spot-info">
+                        <strong class="name">Ventilador de Mesa 40cm Mondial Turbo VT40NB com 8 Pás...</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-comprar">
+        <div class="content">
+            <div class="effect">
+                <span class="close" onclick="closeBuyModal()">
+                    <i class="bi bi-x-circle-fill"></i>
+                </span>
+                <div>
+                    <h3>Confirme a voltagem do produto selecionado</h3>
+                    <span class="variation">110v</span>
+
+                    <div class="btn-actions">
+                        <button class="btn cancel" onclick="closeBuyModal()">Cancelar</button>
+                        <button class="btn confirm" onclick="closeBuyModal()">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-cart">
+        <div class="success">
+            <i class="bi bi-check2"></i>
+            <strong>Produto adicionado à sacola</strong>
+        </div>
+        <span class="close">
+            <i class="bi bi-x-circle-fill"></i>
+        </span>
+    </div>
+
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
+                <img class="logo" src="assets/img/logo.png">
+            </figure>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

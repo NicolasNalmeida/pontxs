@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger" onclick="openCloseMenu('open')">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png">
+            </figure>
+
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png">
+
+                    <nav class="drop-user">
+                        <a href="javascript:;">Minha Conta</a>
+                        <a href="javascript:;">Lorem Ipsum</a>
+                        <a href="javascript:;">Lorem Dolor</a>
+                        <a href="javascript:;">Sair</a>
+                    </nav>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="menu-list container">
+            <li class="close-item">
+                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
+            </li>
+            <li class="item-menu">
+                <a class="selected link-item" href="javascript:;">Categorias <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Lojas <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Serviços <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Cartões e Vales <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Doações <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    
+    <main class="catalog">
+        <section class="container flex-breadcrumb">
+            <nav class="breadcrumb">
+                <h1 class="category-name">Eletrodomésticos</h1>
+                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <span>Ar e Ventilação</span>
+            </nav>
+            <div class="filter">
+                <div class="filter-item">
+                    <label for="order">Ordenar por:</label>
+                    <select class="select">
+                        <option value="Mais resgatados">Mais resgatados</option>
+                        <option value="Menor quantidade de pontos">Menor quantidade de pontos</option>
+                        <option value="Maior quantidade de pontos">Maior quantidade de pontos</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="order">Visualizar:</label>
+                    <select class="select">
+                        <option value="12">12 itens por página</option>
+                        <option value="24">24 itens por página</option>
+                        <option value="36">36 itens por página</option>
+                        <option value="48">48 itens por página</option>
+                        <option value="60">60 itens por página</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="container catalog-content">
+            <form class="category-filter">
+                <div class="flex-title">
+                    <h2 class="filter-title">Filtros</h2>
+                    <i class="bi bi-sliders2-vertical"></i>
+                </div>
+                <div class="filter-category">
+                    <div class="flex-category">
+                        <h2 class="filter-title">Categorias</h2>
+                        <i class="bi bi-chevron-down open-cat" data-cat="category"></i>
+                    </div>
+                    <div class="items-category open" id="category">
+                        <div class="cat-item">
+                            <input type="checkbox" name="Ar Condicionado" id="Ar Condicionado">
+                            <label for="Ar Condicionado" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Ar Condicionado">Ar Condicionado</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Ventiladores e Circuladores" id="Ventiladores e Circuladores">
+                            <label for="Ventiladores e Circuladores" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Ventiladores e Circuladores">Ventiladores e Circuladores</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Climatizadores" id="Climatizadores">
+                            <label for="Climatizadores" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Climatizadores">Climatizadores</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Aquecedores" id="Aquecedores">
+                            <label for="Aquecedores" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Aquecedores">Aquecedores</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Acessórios para Ventilação" id="Acessórios para Ventilação">
+                            <label for="Acessórios para Ventilação" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Acessórios para Ventilação">Acessórios para Ventilação</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-category">
+                    <div class="flex-category">
+                        <h2 class="filter-title">Pontos</h2>
+                        <i class="bi bi-chevron-down open-cat" data-cat="points"></i>
+                    </div>
+                    <div class="items-category open" id="points">
+                        <div class="slider-wrapper">
+                            <input class="input-range" data-slider-id='ex12cSlider' type="text" data-slider-step="1" data-slider-value="10, 90" data-slider-min="0" data-slider-max="100" data-slider-range="true" data-slider-tooltip_split="true" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-category">
+                    <div class="flex-category">
+                        <h2 class="filter-title">Marcas</h2>
+                        <i class="bi bi-chevron-down open-cat" data-cat="brands"></i>
+                    </div>
+                    <div class="items-category open" id="brands">
+                        <div class="cat-item">
+                            <input type="checkbox" name="Arno" id="Arno">
+                            <label for="Arno" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Arno">Arno</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Britânia" id="Britânia">
+                            <label for="Britânia" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Britânia">Britânia</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Cadence" id="Cadence">
+                            <label for="Cadence" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Cadence">Cadence</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Mallory" id="Mallory">
+                            <label for="Mallory" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Mallory">Mallory</label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="Modial" id="Modial">
+                            <label for="Modial" class="checklist"><i class="bi bi-check-lg"></i></label>
+                            <label for="Modial">Modial</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-category">
+                    <div class="flex-category">
+                        <h2 class="filter-title">Marcas</h2>
+                        <i class="bi bi-chevron-down open-cat" data-cat="brands"></i>
+                    </div>
+                    <div class="items-category color open" id="brands">
+                        <div class="cat-item">
+                            <input type="checkbox" name="green" id="green">
+                            <label for="green" class="check-color">
+                                <img src="assets/img/green.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="red" id="red">
+                            <label for="red" class="check-color">
+                                <img src="assets/img/red.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="yellow" id="yellow">
+                            <label for="yellow" class="check-color">
+                                <img src="assets/img/yellow.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="white" id="white">
+                            <label for="white" class="check-color">
+                                <img src="assets/img/white.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="black" id="black">
+                            <label for="black" class="check-color">
+                                <img src="assets/img/black.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="purple" id="purple">
+                            <label for="purple" class="check-color">
+                                <img src="assets/img/purple.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="pink" id="pink">
+                            <label for="pink" class="check-color">
+                                <img src="assets/img/pink.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="blue" id="blue">
+                            <label for="blue" class="check-color">
+                                <img src="assets/img/blue.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="orange" id="orange">
+                            <label for="orange" class="check-color">
+                                <img src="assets/img/orange.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                        <div class="cat-item">
+                            <input type="checkbox" name="cyan" id="cyan">
+                            <label for="cyan" class="check-color">
+                                <img src="assets/img/cyan.jpg">
+                                <i class="bi bi-check"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <div class="catalog-products products">
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spot">
+                    <img src="assets/img/card-1.png">
+                    <div class="spot-info">
+                        <strong class="name">Cesto de Bambu Oikos Vazado 38CM</strong>
+                        <div class="spot-redeem">
+                            <div class="redeem-score">
+                                <span>Resgate a partir de:</span>
+                                <p class="flex-redeem"><strong><i class="bi bi-database"></i>240</strong><span>pontos</span></p>
+                            </div>
+                            <button class="btn">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
+                <img class="logo" src="assets/img/logo.png">
+            </figure>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

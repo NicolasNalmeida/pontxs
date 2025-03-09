@@ -1,0 +1,100 @@
+@use 'vars';
+
+.products {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    &.negative-position {
+        margin-top: -185px;
+    }
+
+    .slick-arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        border: none;
+        background-color: transparent;
+        color: #9377C6;
+        @include vars.toRem(40px);
+        @include vars.prefix(transform, translateY(-50%));
+
+        &.slick-disabled {
+            color: #E2DFDF;
+            cursor: initial;
+        }
+    }
+    
+    .slick-prev { left: 0; }
+    .slick-next { right: 0; }
+
+    .spot {
+        background-color: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 0 15px;
+
+        img {
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .spot-info {
+            padding: 20px;
+
+            .name {
+                @include vars.toRem(16px);
+                display: block;
+                color: #555555;
+                line-height: 18px;
+                font-weight: vars.$regular;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .spot-redeem {
+                @include vars.flexProp(
+                    (display, flex),
+                    (justify-content, space-between),
+                    (align-items, center)
+                );
+            }
+
+            .redeem-score {
+                @include vars.toRem(12px);
+                color: #555;
+
+                p {
+                    color: #9377C6;
+                    margin-top: 5px;
+                    @include vars.toRem(12px);
+                }
+
+                strong {
+                    font-weight: vars.$bold;
+                    margin-right: 5px;
+                    @include vars.toRem(22px);
+                }
+            }
+
+            .btn {
+                cursor: pointer;
+                background-color: #9377C6;
+                border: none;
+                border-radius: 50px;
+                display: block;
+                color: #fff;
+                padding: 10px 20px;
+                transition: .3s;
+
+                &:hover {
+                    background-color: #745f9c;
+                }
+            }
+        }
+    }
+}

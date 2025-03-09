@@ -16,11 +16,11 @@ function stepOne(hide, show) {
 }
 
 function modal(status) {
-    var modal = document.querySelector('.modal');
-    var close = document.querySelector('.close');
-    var textMessage = document.querySelector('.modal .content .message');
+    var modal = document.querySelector('.modal')
+    var close = document.querySelector('.close')
+    var textMessage = document.querySelector('.modal .content .message')
     
-    var arr = [];    
+    var arr = []
 
     if (status === true) {
         arr = [
@@ -48,27 +48,336 @@ function modal(status) {
             '<p>Temos o compromisso com a privacidade, segurança e a qualidade nos produtos e serviços prestados para os participantes durante toda experiência de premiação em nosso site.</p>',
             '<p>Seus dados cadastrais não serão vendidos, trocados ou divulgados para terceiros, exceto quando essas informações são necessárias para o processo de entrega.</p>',
             '<p>Suas informações são essenciais para recebimento da premiação, na sua casa, com segurança e dentro do prazo proposto de entrega. Caso existam alterações na nossa politica de privacidade você será informado através de e-mails ou neste espaço.</p>',
-        ];
-        modal.classList.add('politica');
+        ]
+        modal.classList.add('politica')
     }
     
     textMessage.innerHTML = arr.join(' ');
-    modal.classList.add('show');
+    modal.classList.add('show')
     
     close.addEventListener('click', function() {
-        modal.classList.remove('show');
+        modal.classList.remove('show')
     });
 }
 
+function openBuyModal() {
+    const modalContent = document.querySelector('.modal-comprar');
+    modalContent.classList.add('show')
+}
+
+function closeBuyModal() {
+    const modalClose = document.querySelector('.modal-comprar .close');
+    const modalContent = document.querySelector('.modal-comprar');
+    console.log(modalClose)
+    
+    modalContent.classList.remove('show')
+}
+
+(function addCart() {
+    const addItem = document.querySelector('.add-bag');
+    const closeCart = document.querySelector('.add-cart .close')
+    const cartModal = document.querySelector('.add-cart')
+
+    addItem.addEventListener('click', function() {
+        cartModal.classList.add('show')
+    })
+
+    closeCart.addEventListener('click', function() {
+        cartModal.classList.remove('show')
+    })
+
+    setTimeout(() => {
+        cartModal.classList.remove('show')
+    }, 5000);
+})();
+
 function modalFirstAccess() {
-    var modal = document.querySelector('.modal-first-access');
-    var close = document.querySelector('.modal-first-access .close');
+    var modal = document.querySelector('.modal-first-access')
+    var close = document.querySelector('.modal-first-access .close')
 
     console.log(modal)    
 
     modal.classList.add('show');
     
     close.addEventListener('click', function() {
-        modal.classList.remove('show');
+        modal.classList.remove('show')
     });
 }
+
+function openCloseMenu(action) {
+    var menuContent = document.querySelector('.menu')
+
+    if (action === 'open') {
+        menuContent.classList.add('show')
+    } else if (action === 'close') {
+        menuContent.classList.remove('show')
+    }
+}
+
+function openCloseDropdown(item) {
+    var dropContent = item.closest('.link-item').nextElementSibling
+    dropContent.classList.toggle('open')
+}
+
+(function slickInitBanners(){
+    if (document.querySelector('.banner-main')) {
+        $('.banner-main').slick({
+            infinite: true,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle"></i></button>',
+        });
+    }
+
+    if (document.querySelector('.carousel-category')) {
+        $('.carousel-category').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        })
+    }
+
+    if (document.querySelector('.slick-filter')) {
+        $('.slick-filter').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 6,
+                    }
+                },
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 610,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        })
+    }
+
+    if (document.querySelector('.products.carrossel')) {
+        $('.products.carrossel').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+    }
+
+    if (document.querySelector('.grid-store')) {
+        $('.grid-store').slick({
+            infinite: false,
+            dots: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><i class="bi bi-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="bi bi-arrow-right-circle-fill"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1201,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+    }
+
+    if (document.querySelector('.grid-services')) {
+        $('.grid-services').slick({
+            infinite: false,
+            dots: false,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.2,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 1.2,
+                    }
+                }
+            ]
+        })
+    }
+
+    if (document.querySelector('.image-thumbnail')) {
+        $('.image-thumbnail').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        })
+    }
+})();
+
+(function openCategory() {
+    var openFilter = document.querySelectorAll('.open-cat');
+
+    openFilter.forEach(filter => {
+        filter.addEventListener('click', function() {
+            var content = document.getElementById(this.dataset.cat)
+            content.classList.toggle('open')
+            this.classList.toggle('rotate')
+        })
+    });
+})();
+
+(function() {
+    var tabItem = document.querySelectorAll('.tab-item');
+    var tabTextContent = document.querySelectorAll('.tab-content-item')
+
+    tabItem.forEach(tab => {
+        tab.addEventListener('click', function() {
+            tabItem.forEach(tabRemove => {
+                tabRemove.classList.remove('selected')
+            });
+            this.classList.add('selected')
+
+            tabTextContent.forEach(content => {
+                content.classList.remove('selected')
+            });
+
+            const contentTab = document.getElementById(this.dataset.id)
+
+            contentTab.classList.add('selected')
+        })
+    });
+})();
+
+$(document).ready(function () {
+    $('.input-range').each(function () {
+        var value = $(this).attr('data-slider-value');
+        var separator = value.indexOf(',');
+        if (separator !== -1) {
+            value = value.split(',');
+            value.forEach(function (item, i, arr) {
+                arr[i] = parseFloat(item);
+            });
+        } else {
+            value = parseFloat(value);
+        }
+        $(this).slider({
+            formatter: function (value) {
+                return value;
+            },
+            min: parseFloat($(this).attr('data-slider-min')),
+            max: parseFloat($(this).attr('data-slider-max')),
+            range: $(this).attr('data-slider-range'),
+            value: value,
+            tooltip_split: $(this).attr('data-slider-tooltip_split'),
+            tooltip: $(this).attr('data-slider-tooltip')
+        });
+    });
+});
+

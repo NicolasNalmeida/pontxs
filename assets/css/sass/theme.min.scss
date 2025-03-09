@@ -3,11 +3,19 @@
 @use "reset";
 
 //pages
+@use "home";
 @use "login";
 @use "cadastro";
 @use "wishlist";
+<<<<<<< HEAD
 @use "perfil";
+=======
+@use "catalog";
+@use "product";
+@use "recarga";
+>>>>>>> fc51178979b499be95bdb69ead5af2e115d405ca
 
 // organisms
 @use "header";
 @use "footer";
+@use "spot-product";

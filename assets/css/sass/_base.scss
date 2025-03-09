@@ -1,4 +1,7 @@
 @use 'vars';
+@use 'sass:map';
+
+* { font-family: vars.$fontMain; }
 
 html, body {
     font-family: vars.$fontMain;
@@ -13,7 +16,8 @@ html, body {
 }
 
 .modal,
-.modal-first-access {
+.modal-first-access,
+.modal-comprar {
     transition: .3s;
     opacity: 0;
     visibility: hidden;
@@ -206,6 +210,110 @@ html, body {
     }
 }
 
+.modal-comprar {
+    .content { width: 30%; }
+
+    h3 {
+        color: #424242;
+        @include vars.toRem(20px);
+    }
+
+    .variation {
+        background-color: #9377C6;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        display: inline-block;
+        margin-top: 25px;
+        @include vars.toRem(16px);
+    }
+
+    .btn-actions {
+        border-top: 1px solid #ddd;
+        margin-top: 20px;
+        padding-top: 20px;
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, center),
+            (justify-content, space-between)
+        );
+
+        .btn {
+            cursor: pointer;
+            width: calc(50% - 10px);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #9377C6;
+            background-color: transparent;
+            color: #9377C6;
+            transition: .3s;
+            @include vars.toRem(16px);
+
+            &.confirm {
+                background-color: #9377C6;
+                color: #fff;
+            }
+
+            &:hover {
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+.breadcrumb {
+    color: #555555;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    a {
+        text-decoration: none;
+        color: #555555;
+    }
+}
+
+.add-cart {
+    position: fixed;
+    width: 20%;
+    top: 20px;
+    right: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 30px -15px #000;
+    transition: .3s;
+    @include vars.flexProp(
+        (display, flex),
+        (justify-content, space-between),
+        (align-items, center)
+    );
+
+    &.show { right: 20px; }
+
+    .success {
+        @include vars.toRem(16px);
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, center)
+        );
+
+        i {
+            color: #43C138;
+            margin-right: 5px;
+            @include vars.toRem(25px);
+        }
+
+        strong { font-weight: vars.$regular; }
+    }
+
+    .close {
+        cursor: pointer;
+        color: #9377C6;
+        @include vars.toRem(25px);
+    }
+}
+
 .container {
     width: 1320px;
     margin: 0 auto;
@@ -309,5 +417,50 @@ html, body {
     &.bold { 
         font-weight: vars.$bold;
         @include vars.toRem(16px);
+    }
+}
+
+$slider-colors: (
+    'default': #424242,
+    'success': #5cb85c,
+    'primary': #428bca,
+    'info': #5bc0de,
+    'warning': #f0ad4e,
+    'danger': #d9534f
+);
+
+.slider-wrapper {
+    margin-bottom: 40px;
+}
+
+.slider-selection {
+    background: map.get($slider-colors, 'default') !important;
+}
+
+@each $color, $value in $slider-colors {
+    .slider-#{$color} .slider-selection {
+        background-color: $value !important;
+    }
+}
+
+.slider {
+    &.slider-horizontal {
+        width: 100% !important;
+        position: relative;
+
+        .tooltip {
+            position: absolute;
+            bottom: -25px;
+
+            &[style="left: 50%;"] {
+                display: none;
+            }
+        }
+    }
+
+    &-handle {
+        background-color: #424242 !important;
+        background-image: none !important;
+        box-shadow: 1px 1px 24px -2px rgba(0, 0, 0, 0.75) !important;
     }
 }
