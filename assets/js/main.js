@@ -78,24 +78,28 @@ function closeBuyModal() {
     const closeCart = document.querySelector('.add-cart .close')
     const cartModal = document.querySelector('.add-cart')
 
-    addItem.addEventListener('click', function() {
-        cartModal.classList.add('show')
-    })
+    if (addItem) {
+        addItem.addEventListener('click', function() {
+            cartModal.classList.add('show')
+        })
+    }
 
-    closeCart.addEventListener('click', function() {
-        cartModal.classList.remove('show')
-    })
+    if (closeCart) {
+        closeCart.addEventListener('click', function() {
+            cartModal.classList.remove('show')
+        })
+    }
 
-    setTimeout(() => {
-        cartModal.classList.remove('show')
-    }, 5000);
+    if (cartModal) {
+        setTimeout(() => {
+            cartModal.classList.remove('show')
+        }, 5000);
+    }
 })();
 
 function modalFirstAccess() {
     var modal = document.querySelector('.modal-first-access')
-    var close = document.querySelector('.modal-first-access .close')
-
-    console.log(modal)    
+    var close = document.querySelector('.modal-first-access .close')  
 
     modal.classList.add('show');
     
