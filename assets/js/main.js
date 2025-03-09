@@ -60,6 +60,37 @@ function modal(status) {
     });
 }
 
+function openBuyModal() {
+    const modalContent = document.querySelector('.modal-comprar');
+    modalContent.classList.add('show')
+}
+
+function closeBuyModal() {
+    const modalClose = document.querySelector('.modal-comprar .close');
+    const modalContent = document.querySelector('.modal-comprar');
+    console.log(modalClose)
+    
+    modalContent.classList.remove('show')
+}
+
+(function addCart() {
+    const addItem = document.querySelector('.add-bag');
+    const closeCart = document.querySelector('.add-cart .close')
+    const cartModal = document.querySelector('.add-cart')
+
+    addItem.addEventListener('click', function() {
+        cartModal.classList.add('show')
+    })
+
+    closeCart.addEventListener('click', function() {
+        cartModal.classList.remove('show')
+    })
+
+    setTimeout(() => {
+        cartModal.classList.remove('show')
+    }, 5000);
+})();
+
 function modalFirstAccess() {
     var modal = document.querySelector('.modal-first-access')
     var close = document.querySelector('.modal-first-access .close')
@@ -85,7 +116,6 @@ function openCloseMenu(action) {
 
 function openCloseDropdown(item) {
     var dropContent = item.closest('.link-item').nextElementSibling
-
     dropContent.classList.toggle('open')
 }
 
@@ -350,3 +380,4 @@ $(document).ready(function () {
         });
     });
 });
+
