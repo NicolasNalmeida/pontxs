@@ -171,5 +171,20 @@
                 }
             }
         }
+
+        .redeem {
+            border-top: 1px solid #ddd;
+            padding-top: 25px;
+            label { color: #555; }
+            .points {
+                margin-top: 10px;
+                @include vars.flexProp(
+                    (display, flex)
+                );
+
+                color: #9377C6;
+                @include vars.toRem(30px);
+            }
+        }
     }
 }
