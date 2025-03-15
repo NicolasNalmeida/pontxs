@@ -240,7 +240,22 @@
                         </div>
                         <div class="btn-actions">
                             <button class="btn cancel" onclick="closeModal('confirm')">Cancelar</button>
-                            <button class="btn confirm" onclick="closeModal('confirm')">Confirmar</button>
+                            <button class="btn confirm" onclick="openModal('confirm-success')">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-sucess">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('confirm-success')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <i class="bi bi-check-lg icon sucess"></i>
+                        <div>
+                            <strong class="message">Pagamento realizado<br> com sucesso.</strong>
                         </div>
                     </div>
                 </div>

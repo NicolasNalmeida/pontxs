@@ -70,6 +70,11 @@ function openModal(type) {
     } else if (type === 'confirm') {
         const modalContent = document.querySelector('.modal-confirm');
         modalContent.classList.add('show')
+    }  else if (type === 'confirm-success') {
+        const modalContent = document.querySelector('.modal-sucess');
+        modalContent.classList.add('show')
+
+        document.querySelector('.modal-confirm').classList.remove('show')
     }
 }
 
@@ -82,6 +87,9 @@ function closeModal(type) {
         modalContent.classList.remove('show')
     } else if (type === 'confirm') {
         const modalContent = document.querySelector('.modal-confirm');    
+        modalContent.classList.remove('show')
+    } else if (type === 'confirm-success') {
+        const modalContent = document.querySelector('.modal-sucess');    
         modalContent.classList.remove('show')
     }
 }

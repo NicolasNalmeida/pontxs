@@ -19,7 +19,8 @@ html, body {
 .modal-first-access,
 .modal-comprar,
 .modal-terms,
-.modal-confirm {
+.modal-confirm,
+.modal-sucess {
     transition: .3s;
     opacity: 0;
     visibility: hidden;
@@ -370,10 +371,10 @@ html, body {
             color: #424242;
             text-align: left;
             width: 45%;
-            @include vars.toRem(20px);
+            @include vars.toRem(16px);
 
             @media(max-width: vars.$bp1200) {
-                @include vars.toRem(16px);
+                @include vars.toRem(14px);
             }
 
             @media(max-width: vars.$bp500) {
@@ -392,6 +393,33 @@ html, body {
     .btn-actions {
         border: none;
         padding-top: 0;
+    }
+}
+
+.modal-sucess {
+    .icon {
+        color: #2ABE34;
+        width: 50px;
+        height: 50px;
+        background-color: #F0F0F0;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        @include vars.toRem(30px);
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, center),
+            (justify-content, center)
+        );
+    }
+
+    .message {
+        color: #9377C6;
+        @include vars.toRem(20px);
+
+        @media(max-width: vars.$bp500) {
+            @include vars.toRem(18px);
+        }
     }
 }
 

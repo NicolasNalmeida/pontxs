@@ -129,69 +129,76 @@
     <main class="recarga">
         <section class="container">
             <nav class="breadcrumb">
-                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Ar e Ventilação</a> <i class="bi bi-chevron-right"></i> <span>Ventilador de Mesa</span>
+                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Serviços</a> <i class="bi bi-chevron-right"></i> <span>Pix</span>
             </nav>
 
-            <h1 class="title">Recarga de Celular</h1>
+            <h1 class="title">Pix</h1>
             <picture>
                 <source media="(max-width: 768px)" srcset="https://dummyimage.com/768x450/000/fff">
-                <img class="banner-resgate" src="assets/img/banner-resgate.png">
+                <img class="banner-resgate" src="assets/img/banner-pag-pix.png">
             </picture>
 
             <form class="recarga">
                 <div class="flex-recarga">
                     <div class="form-content">
                         <div class="form-group">
-                            <label>Operadora:</label>
-                            <select class="select">
-                                <option>Selecione</option>
-                                <option value="Tim">Tim</option>
-                                <option value="Vivo">Vivo</option>
-                                <option value="Claro">Claro</option>
-                            </select>
+                            <label>Chave PIX:</label>
+                            <div class="flex-check">
+                                <div class="check-group">
+                                    <input type="radio" name="key" id="cpfcnpj">
+                                    <label for="cpfcnpj" class="check-style"></label>
+                                    <label for="cpfcnpj">CPF/CNPJ</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="radio" name="key" id="email">
+                                    <label for="email" class="check-style"></label>
+                                    <label for="email">E-mail</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="radio" name="key" id="phone">
+                                    <label for="phone" class="check-style"></label>
+                                    <label for="phone">Telefone</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="radio" name="key" id="random">
+                                    <label for="random" class="check-style"></label>
+                                    <label for="random">Chave Aleatória</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label>(DDD) Número do celular:</label>
-                            <input type="text" class="input" placeholder="Insira o número de celular">
+                            <label>CPF/CNPJ:</label>
+                            <input type="text" class="input" placeholder="Insira o CPF ou CNPJ">
                         </div>
-                        <div class="form-group">
-                            <label>Valor da Recarga:</label>
-                            <select class="select">
-                                <option>Selecione</option>
-                                <option value="10">R$10,00</option>
-                                <option value="20">R$20,00</option>
-                                <option value="30">R$30,00</option>
-                                <option value="40">R$40,00</option>
-                                <option value="50">R$50,00</option>
-                                <option value="60">R$60,00</option>
-                                <option value="70">R$70,00</option>
-                                <option value="80">R$80,00</option>
-                                <option value="90">R$90,00</option>
-                                <option value="100">R$100,00</option>
-                            </select>
+                        <div class="form-group pts">
+                            <label>Quantos pontos você quer trocar?</label>
+                            <input type="text" class="input" placeholder="0">
                         </div>
+                        <span class="obs">O saldo é depositado na sua conta em até x dias úteis, e você tem direito a até x transferências mensais.</span>
                         <div class="redeem">
-                            <label>Resgate por:</label>
+                            <label>Total em R$:</label>
                             <div class="points">
-                                <i class="bi bi-database"></i>
-                                <p><strong>20</strong> pontos</p>
+                                <p><strong>R$ 50,00</strong></p>
                             </div>
                         </div>
                     </div>
                     <div class="resume">
-                        <h3>Resumo da recarga:</h3>
+                        <h3>Resumo do pagamento:</h3>
                         <div class="resume-content">
                             <div class="resume-label">
-                                <label>Operadora:</label> <p>Vivo</p>
+                                <label>Chave:</label> <p>325.600.758-94</p>
                             </div>
                             <div class="resume-label">
-                                <label>Celular:</label> <p>(11) 97170-8188</p>
+                                <label>Favorecido:</label> <p>XXXXXXXXXXX XX XXXXXX</p>
                             </div>
                             <div class="resume-label">
-                                <label>Valor da recarga:</label> <p>R$ 15,00</p>
+                                <label>Banco:</label> <p>PicPay</p>
+                            </div>
+                            <div class="resume-label">
+                                <label>Valor da transferências:</label> <p>R$ 50,00</p>
                             </div>
                             <div class="resume-label points-finish">
-                                <label>Pontos Utilizados:</label> <p>20 pontos</p>
+                                <label>Pontos Utilizados:</label> <p>8.000</p>
                             </div>
                             <div class="terms">
                                 <input type="checkbox" class="check" id="check">
@@ -211,18 +218,8 @@
                     </span>
                     <div>
                         <h3>Termo de Uso</h3>
-                        <p>O que é a Recarga de Celular?</p>
-                        <p>A recarga é um crédito inserido de forma automática de qualquer região do Brasil, conforme políticas de cada Operadora de forma prática e segura.</p>
-                        <p>Atenção: Os valores podem sofrer alterações sem aviso prévio de acordo com a região de atuação de cada Operadora.</p>
-                        <p>As recargas são feitas em todo território nacional?</p>
-                        <p>Sim e de acordo com a política de cada Operadora. Esteja atento as regiões de abrangência, pois elas podem sofrer alterações de acordo com sua Operadora.</p>
-                        <p>Após resgate, em quanto tempo minha recarga estará disponível em meu celular?</p>
-                        <p>A recarga pode levar até 96 horas para ser disponibilizada no telefone. E se você efetuou mais de uma recarga, os créditos serão disponibilizados de forma gradativa e individual em até 96hs.</p>
-                        <p>Atenção: Não é possível realizar duas recargas em um mesmo celular em menos de três minutos entre uma recarga e outra.</p>
-                        <p>Qual o prazo de arrependimento? Como devo proceder?</p>
-                        <p>Não é possível fazer o cancelamento das recargas após a efetivação da mesma.</p>
-                        <p>Qual a validade da minha recarga?</p>
-                        <p>A validade da recarga está relacionada a política de cada operadora.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non nisi porta nibh accumsan placerat ac eu elit. Fusce consequat varius dignissim. Nunc at enim vitae ante sollicitudin tristique. Nunc quis metus eget lacus sagittis viverra sit amet at urna. Proin nec nulla ex. Nulla gravida tempus tempus. Aenean aliquet, urna eleifend tempus tincidunt, nisl justo faucibus ipsum, ut dignissim nunc magna venenatis metus. In dolor orci, tincidunt vel volutpat quis, interdum id quam. In sollicitudin maximus orci, quis interdum quam laoreet ut. Maecenas sit amet aliquam ligula, et euismod sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet vehicula lacus. Sed sodales massa nunc, eget blandit dui dapibus vitae.</p>
+                        <p>Suspendisse enim erat, hendrerit non lacinia a, lobortis et nisi. Etiam finibus eu nulla ut rutrum. Nulla a scelerisque lacus. Vestibulum vulputate placerat diam, ut faucibus neque. Vestibulum faucibus ante in ipsum rutrum, eu finibus augue mollis. In vestibulum erat ante, eu pellentesque dui convallis in. Nunc suscipit, ex at varius imperdiet, ex ligula maximus massa, vel vehicula mauris massa rutrum turpis. Ut dictum ac erat eget mattis. Aliquam varius felis non commodo ultrices. Nulla faucibus convallis velit, eu eleifend enim interdum non.</p>
                     </div>
                 </div>
             </div>
@@ -234,25 +231,28 @@
                         <i class="bi bi-x-circle-fill"></i>
                     </span>
                     <div>
-                        <h3>Confira o as informações antes de finalizar a recarga.</h3>
+                        <h3>Confira o as informações antes de finalizar a transferência.</h3>
                         <div>
                             <div class="flex-content">
-                                <strong>Operadora:</strong>
-                                <p>Vivo</p>
+                                <strong>Chave:</strong>
+                                <p>325.600.758-94</p>
                             </div>
                             <div class="flex-content">
-                                <strong>Celular:</strong>
-                                <p>(11) 97170-8188</p>
+                                <strong>Favorecido:</strong>
+                                <p>XXXXXXXXXXX XX XXXXXX</p>
                             </div>
                             <div class="flex-content">
-                                <strong>Valor da recarga:</strong>
-                                <p>R$ 15,00</p>
+                                <strong>Banco:</strong>
+                                <p>PicPay</p>
+                            </div>
+                            <div class="flex-content">
+                                <strong>Valor da transferência:</strong>
+                                <p>R$ 50,00</p>
                             </div>
                         </div>
-                        <span class="warning"><b>Importante:</b> As recargas de celular são válidas apenas para celulares de planos pré-pagos ou controle.</span>
                         <div class="btn-actions">
                             <button class="btn cancel" onclick="closeModal('confirm')">Cancelar</button>
-                            <button class="btn confirm" onclick="openModal('confirm-success')">Confirmar Recarga</button>
+                            <button class="btn confirm" onclick="openModal('confirm-success')">Confirmar</button>
                         </div>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                     <div>
                         <i class="bi bi-check-lg icon sucess"></i>
                         <div>
-                            <strong class="message">Recarga de celular<br> realizada com sucesso.</strong>
+                            <strong class="message">PIX realizado com sucesso.</strong>
                         </div>
                     </div>
                 </div>
