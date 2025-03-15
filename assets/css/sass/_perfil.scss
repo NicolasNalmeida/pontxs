@@ -9,7 +9,6 @@
 
         .perfil-header {
             margin-bottom: 30px;
-            border-bottom: 1px solid #D9D9D9;
 
             .breadcrumb {
                 color: #4B4B4B;
@@ -25,6 +24,7 @@
                     }
                 }
             }
+
 
             h1 {
                 @include vars.toRem(30px);
@@ -44,6 +44,7 @@
 
         .profile-tabs li {
             margin-right: 50px;
+            border-bottom: 2px solid #9377c600;
         }
 
         .profile-tabs li[role="tab"] a {
@@ -86,7 +87,7 @@
         .profile-tabs li[role="tab"]:hover i {
             color: #fff;
             background-color: #9377C6;
-            border: none;
+            border: 3px solid #9377C6;
         }
 
 
@@ -216,7 +217,7 @@
             background-color: #F1F1F1;
             border: 1px solid #9377C6;
             border-radius: 28px;
-            padding: 20px;
+            padding: 30px;
             margin-bottom: 30px;
 
             h2 {
@@ -224,6 +225,21 @@
                 font-weight: vars.$bold;
                 color: #303030;
                 margin-bottom: 20px;
+
+            }
+
+            .form-ep{
+
+                font-family: vars.$fontMain;
+                font-weight: vars.$regular;
+                @include vars.toRem(16px);
+                color: #FFFFFF;
+                border: none;
+                padding: 6px 11px;
+                border-radius: 20px;
+                background-color: #9377C6;
+                margin-bottom: 20px;
+                
             }
 
             .required {
@@ -234,17 +250,21 @@
                 margin-bottom: 15px;
 
                 .label {
-                    font-weight: vars.$bold;
+                    font-weight: vars.$regular;
+                    font-family: vars.$fontMain;
                     display: block;
                     color: #424242;
                     margin-bottom: 6px;
                     @include vars.toRem(15px);
+
+                    @media (max-width: 768px) {
+                        @include vars.toRem(12px);
+                    }
                 }
 
                 .input {
                     width: 100%;
                     border: 1px solid #9377C6;
-                    padding: 10px;
                     @include vars.toRem(16px);
                     border-radius: 10px;
 
@@ -268,6 +288,15 @@
                 }
             }
 
+            .form-1{
+                @include vars.flexProp((display, flex));
+                gap: 30px;
+
+                .endereco {
+                    width: 80%;
+                }
+            }
+
             .form-3,
             .form-2,
             .form-4 {
@@ -278,25 +307,18 @@
                     flex: 1;
                 }
 
+                .endereco-input {
+                    width: 100%; // O campo de endereço ocupará 70% da largura
+                }
+
+                .numero-input {
+                    width: 30%; // O campo de número ocupará 30% da largura
+                }
+
                 .input-container {
                     position: relative;
                     @include vars.flexProp((display, flex),
                         (align-items, center));
-                }
-            }
-
-            .form-3 {
-                .form-control {
-                    @include vars.flexProp((display, flex),
-                        (flex-direction, column));
-
-                    .label {
-                        white-space: nowrap;
-                    }
-
-                    .input {
-                        min-width: 200px;
-                    }
                 }
             }
 
@@ -327,7 +349,6 @@
                     }
                 }
 
-                .form-2,
                 .form-3 {
                     @include vars.flexProp((flex-direction, column));
                     gap: 15px;
@@ -363,12 +384,29 @@
             gap: 1rem; // Espaço entre os elementos
 
             .info-obrigatorios {
-                @include vars.toRem(14px);
+                @include vars.toRem(12px);
                 color: #AAAAAA;
             }
 
             .terms-checkbox {
                 @include vars.toRem(14px);
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                
+                .check-descricao{
+                    font-family: vars.$fontSec;
+                    font-weight: vars.$regular;
+                    @include vars.toRem(12px);
+                    color: #424242;
+                }
+
+                input[type="checkbox"] {
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                    accent-color: #9377C6;
+                }
 
                 a {
                     color: #9377C6;
@@ -378,10 +416,8 @@
 
             // Quando a tela for menor que 768px, os itens ficam um abaixo do outro
             @media (max-width: 768px) {
-                @include vars.flexProp(
-                    (flex-direction, column),
-                    (align-items, flex-start)
-                );
+                @include vars.flexProp((flex-direction, column),
+                    (align-items, flex-start));
             }
         }
 

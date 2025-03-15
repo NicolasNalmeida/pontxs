@@ -83,13 +83,13 @@
             <nav role="tablist" class="profile-tabs">
                 <ul>
                     <li role="tab" aria-selected="true" aria-controls="dados-pessoais">
-                        <a href="#dados-pessoais">
+                        <a href="#" id="show-or-hide">
                             <i class="bi bi-person" aria-label="Ícone de Dados Pessoais"></i>
                             <span>Dados Pessoais</span>
                         </a>
                     </li>
                     <li role="tab" aria-selected="false" aria-controls="meus-enderecos">
-                        <a href="#meus-enderecos">
+                        <a  href="#" id="show-or-hide">
                             <i class="bi bi-house-door" aria-label="Ícone de Endereços Pessoais"></i>
                             <span>Meus Endereços</span>
                         </a>
@@ -97,15 +97,69 @@
                 </ul>
             </nav>
 
-            <section class="profile-photo-section">
+            <section id="meus-enderecos" class="meus-enderecos form-default">
+                <button class="form-ep">Endereço Principal</button>
+                <div class="form-1">
+                    <div class="form-control endereco">
+                        <label for="logradouro" class="label">Endereço<span class="required">*</span></label>
+                        <input class="input" type="text" name="logradouro" id="logradouro" placeholder="Rua, Av.">
+                    </div>
+                    <div class="form-control numeros">
+                        <label for="numero" class="label">Número <span class="required">*</span></label>
+                        <input class="input" type="text" name="numero" id="numero" placeholder="Número">
+                    </div>
+                </div>
+                <div class="form-2">
+                    <div class="form-control">
+                        <label for="complemento" class="label">Complemento</label>
+                        <input class="input" type="text" name="complemento" id="complemento" placeholder="Complemento">
+                    </div>
+                    <div class="form-control">
+                        <label for="bairro" class="label">Bairro <span class="required">*</span></label>
+                        <input class="input" type="text" name="bairro" id="bairro" placeholder="Bairro">
+                    </div>
+                </div>
+                <div class="form-3">
+                    <div class="form-control">
+                        <label for="cidade" class="label">Cidade <span class="required">*</span></label>
+                        <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
+                    </div>
+                    <div class="form-control">
+                        <label for="estado" class="label">Estado <span class="required">*</span></label>
+                        <input class="input" type="text" name="estado" id="estado" placeholder="Estado">
+                    </div>
+                    <div class="form-control">
+                        <label for="cep" class="label">CEP <span class="required">*</span></label>
+                        <input class="input" type="text" name="cep" id="cep" placeholder="00000-000">
+                    </div>
+                </div>
+                <div class="info-and-checkbox">
+                    <div class="info-obrigatorios">
+                        Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                    </div>
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" />
+                        <label for="terms" class="check-descricao">
+                            Endereço Principal
+                        </label>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </section>
+    
+
+            <section id="dados-pessoais" class="profile-photo-section">
                 <div class="form-default">
                     <div class="form-control">
                         <figure class="profile-photo-preview">
                             <div class="profile-photo-preview-container">
-                                <img id="profile-image" src="assets/img/user1 (1).png" alt="Foto de perfil do usuário">
+                                <img id="profile-image" src="assets/img/user-image-lg.png" alt="Foto de perfil do usuário">
                                 <figcaption>
                                     <button class="btn-change-photo" id="change-photo">Alterar imagem</button>
                                 </figcaption>
+                            </div>
                         </figure>
                         <div class="profile-photo-upload">
                             <label for="file-upload" class="file-upload-label">Foto do perfil:</label>
@@ -125,9 +179,8 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Grupo de campos: Dados Pessoais -->
-            <section class="form-default">
+            
+            <section id="dados-pessoais" class="form-default">
                 <h2>Dados Pessoais</h2>
                 <div class="form-control">
                     <label for="name" class="label">Nome <span class="required">*</span></label>
@@ -170,25 +223,23 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Grupo de campos: Telefones -->
-            <section class="form-default">
+            
+            <section id="dados-pessoais" class="form-default">
                 <h2>Telefones</h2>
                 <div class="form-3">
                     <div class="form-control">
                         <label for="celular" class="label">Celular <span class="required">*</span></label>
                         <input class="input" type="text" name="celular" id="celular" placeholder="(xx) 00000-0000">
                     </div>
-
+            
                     <div class="form-control">
                         <label for="telefone" class="label">Telefone</label>
                         <input class="input" type="text" name="telefone" id="telefone" placeholder="(xx) 00000-0000">
                     </div>
                 </div>
             </section>
-
-            <!-- Grupo de campo: e-mail -->
-            <section class="form-default">
+            
+            <section id="dados-pessoais" class="form-default">
                 <h2>Outros Dados</h2>
                 <div class="form-4">
                     <div class="form-control">
@@ -197,9 +248,8 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Linha com info obrigatórios e checkbox -->
-            <section class="info-and-checkbox">
+            
+            <section id="dados-pessoais" class="info-and-checkbox">
                 <div class="info-obrigatorios">
                     Campos com <span>*</span> possuem campo de preenchimento obrigatório
                 </div>
@@ -207,9 +257,8 @@
                     <a href="#">Regulamento</a> e <a href="#">Termos de Uso</a>.
                 </div>
             </section>
-
-            <!-- Botão de Salvar -->
-            <div class="actions">
+            
+            <div id="dados-pessoais" class="actions">
                 <button type="submit" class="btn-save">Salvar</button>
             </div>
 
