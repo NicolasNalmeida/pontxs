@@ -17,7 +17,9 @@ html, body {
 
 .modal,
 .modal-first-access,
-.modal-comprar {
+.modal-comprar,
+.modal-terms,
+.modal-confirm {
     transition: .3s;
     opacity: 0;
     visibility: hidden;
@@ -41,6 +43,7 @@ html, body {
     &.show {
         opacity: 1;
         visibility: visible;
+        z-index: 2;
     }
 
     .content {
@@ -210,8 +213,27 @@ html, body {
     }
 }
 
-.modal-comprar {
-    .content { width: 30%; }
+.modal-comprar,
+.modal-confirm {
+    .content {
+        width: 30%;
+
+        @media(max-width: vars.$bp1600) {
+            width: 35%;
+        }
+
+        @media(max-width: vars.$bp992) {
+            width: 50%;
+        }
+
+        @media(max-width: vars.$bp680) {
+            width: 70%;
+        }
+
+        @media(max-width: vars.$bp480) {
+            width: 90%;
+        }
+    }
 
     h3 {
         color: #424242;
@@ -258,6 +280,118 @@ html, body {
                 border-radius: 50px;
             }
         }
+    }
+}
+
+.modal-terms {
+    .content {
+        width: 40%;
+        max-height: 100%;
+        overflow-y: auto;
+
+        .effect {
+            padding: 60px 40px;
+        }
+
+        @media(max-width: vars.$bp992) {
+            width: 50%;
+        }
+
+        @media(max-width: vars.$bp680) {
+            width: 70%;
+        }
+
+        @media(max-width: vars.$bp480) {
+            width: 90%;
+        }
+    }
+
+    h3,p {
+        text-align: left;
+        color: #424242;
+        font-weight: vars.$semiBold;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    h3 { @include vars.toRem(22px); }
+
+    .modal-list {
+        li {
+            text-align: left;
+            color: #424242;
+            font-weight: vars.$semiBold;
+            margin-bottom: 10px;
+            line-height: 25px;
+        }
+    }
+}
+
+.modal-confirm {
+    .content {
+        width: 28%;
+
+        @media(max-width: vars.$bp1600) {
+            width: 35%;
+        }
+
+        @media(max-width: vars.$bp992) {
+            width: 50%;
+        }
+
+        @media(max-width: vars.$bp680) {
+            width: 70%;
+        }
+
+        @media(max-width: vars.$bp480) {
+            width: 90%;
+        }
+    }
+
+    h3 {
+        text-align: left;
+        color: #424242;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        @include vars.toRem(20px);
+    }
+
+    .flex-content {
+        margin-bottom: 10px;
+
+        @include vars.flexProp( (display, flex) );
+
+        @media(max-width: vars.$bp500) {
+            @include vars.flexProp( (flex-direction, column) );
+        }
+
+        strong,p {
+            color: #424242;
+            text-align: left;
+            width: 45%;
+            @include vars.toRem(20px);
+
+            @media(max-width: vars.$bp1200) {
+                @include vars.toRem(16px);
+            }
+
+            @media(max-width: vars.$bp500) {
+                width: 100%;
+            }
+        }
+    }
+
+    .warning {
+        text-align: left;
+        display: block;
+        margin: 30px 0;
+        color: #EC9B30;
+    }
+
+    .btn-actions {
+        border: none;
+        padding-top: 0;
     }
 }
 

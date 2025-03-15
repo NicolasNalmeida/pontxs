@@ -60,17 +60,30 @@ function modal(status) {
     });
 }
 
-function openBuyModal() {
-    const modalContent = document.querySelector('.modal-comprar');
-    modalContent.classList.add('show')
+function openModal(type) {
+    if (type === 'comprar') {
+        const modalContent = document.querySelector('.modal-comprar');
+        modalContent.classList.add('show')
+    } else if (type === 'termos') {
+        const modalContent = document.querySelector('.modal-terms');
+        modalContent.classList.add('show')
+    } else if (type === 'confirm') {
+        const modalContent = document.querySelector('.modal-confirm');
+        modalContent.classList.add('show')
+    }
 }
 
-function closeBuyModal() {
-    const modalClose = document.querySelector('.modal-comprar .close');
-    const modalContent = document.querySelector('.modal-comprar');
-    console.log(modalClose)
-    
-    modalContent.classList.remove('show')
+function closeModal(type) {
+    if (type === 'comprar') {
+        const modalContent = document.querySelector('.modal-comprar');    
+        modalContent.classList.remove('show')
+    } else if (type === 'termos') {
+        const modalContent = document.querySelector('.modal-terms');    
+        modalContent.classList.remove('show')
+    } else if (type === 'confirm') {
+        const modalContent = document.querySelector('.modal-confirm');    
+        modalContent.classList.remove('show')
+    }
 }
 
 (function addCart() {

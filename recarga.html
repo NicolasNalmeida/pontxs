@@ -195,14 +195,69 @@
                             </div>
                             <div class="terms">
                                 <input type="checkbox" class="check" id="check">
-                                <label for="check">Li e aceito o <a href="#">Termo de uso</a></label>
+                                <label for="check">Li e aceito o <a href="javascript:;" onclick="openModal('termos')">Termo de uso</a></label>
                             </div>
-                            <button class="finish-btn">Finalizar resgate</button>
+                            <button type="button" class="finish-btn" onclick="openModal('confirm')">Finalizar resgate</button>
                         </div>
                     </div>
                 </div>
             </form>
         </section>
+        <div class="modal-terms">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('termos')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <h3>Termo de Uso</h3>
+                        <p>O que é a Recarga de Celular?</p>
+                        <p>A recarga é um crédito inserido de forma automática de qualquer região do Brasil, conforme políticas de cada Operadora de forma prática e segura.</p>
+                        <p>Atenção: Os valores podem sofrer alterações sem aviso prévio de acordo com a região de atuação de cada Operadora.</p>
+                        <p>As recargas são feitas em todo território nacional?</p>
+                        <p>Sim e de acordo com a política de cada Operadora. Esteja atento as regiões de abrangência, pois elas podem sofrer alterações de acordo com sua Operadora.</p>
+                        <p>Após resgate, em quanto tempo minha recarga estará disponível em meu celular?</p>
+                        <p>A recarga pode levar até 96 horas para ser disponibilizada no telefone. E se você efetuou mais de uma recarga, os créditos serão disponibilizados de forma gradativa e individual em até 96hs.</p>
+                        <p>Atenção: Não é possível realizar duas recargas em um mesmo celular em menos de três minutos entre uma recarga e outra.</p>
+                        <p>Qual o prazo de arrependimento? Como devo proceder?</p>
+                        <p>Não é possível fazer o cancelamento das recargas após a efetivação da mesma.</p>
+                        <p>Qual a validade da minha recarga?</p>
+                        <p>A validade da recarga está relacionada a política de cada operadora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-confirm">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('confirm')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <h3>Confira o as informações antes de finalizar a recarga.</h3>
+                        <div>
+                            <div class="flex-content">
+                                <strong>Operadora:</strong>
+                                <p>Vivo</p>
+                            </div>
+                            <div class="flex-content">
+                                <strong>Celular:</strong>
+                                <p>(11) 97170-8188</p>
+                            </div>
+                            <div class="flex-content">
+                                <strong>Valor da recarga:</strong>
+                                <p>R$ 15,00</p>
+                            </div>
+                        </div>
+                        <span class="warning"><b>Importante:</b> As recargas de celular são válidas apenas para celulares de planos pré-pagos ou controle.</span>
+                        <div class="btn-actions">
+                            <button class="btn cancel" onclick="closeModal('comprar')">Cancelar</button>
+                            <button class="btn confirm" onclick="closeModal('comprar')">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="footer">

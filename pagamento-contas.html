@@ -182,14 +182,70 @@
                             </div>
                             <div class="terms">
                                 <input type="checkbox" class="check" id="check">
-                                <label for="check">Li e aceito o <a href="#">Termo de uso</a></label>
+                                <label for="check">Li e aceito o <a href="javascript:;" onclick="openModal('termos')">Termo de uso</a></label>
                             </div>
-                            <button class="finish-btn">Finalizar resgate</button>
+                            <button type="button" class="finish-btn" onclick="openModal('confirm')">Finalizar resgate</button>
                         </div>
                     </div>
                 </div>
             </form>
         </section>
+        <div class="modal-terms">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('termos')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <h3>Termo de Uso</h3>
+                        <p>Através do parceiro de pagamento de contas, você pode pagar, contas de água, luz, telefone, gás entre outras opções. Os pagamentos podem ser realizados até às 21h (horário de Brasília). Pagamentos realizados em dias não úteis serão processados no dia útil posterior. * É cobrada uma taxa de 10% em cima do valor do boleto. * Por se tratar de pagamentos de contas, após a confirmação do pedido não é possível seu cancelamento, pois a informação é enviada para à instituição financeira correspondente. Contas de Concessionárias são faturas emitidas por empresas de água, luz, telefone, gás e outros serviços em geral. AVISO:</p>
+                        <ul class="modal-list">
+                            <li>- Manter seus dados cadastrais atualizados.</li>
+                            <li>- Serão aceitos apenas documentos com código de barra.</li>
+                            <li>- A responsabilidade pela digitação do código de barras é do cliente.</li>
+                            <li>- O pagamento da conta deve ser realizado com até 4 dias de antecedência do vencimento.</li>
+                            <li>- Este processo de pagamento não quita débitos futuros.</li>
+                            <li>- Algumas concessionárias não permitem o pagamento com pontos, caso seja pertinente à conta que você está tentando pagar, aparecerá uma mensagem na tela com essa informação quando o pagamento for negado.</li>
+                            <li>- Caberá ao Participante, em qualquer operação de pagamento, verificar junto à Concessionária a efetiva quitação de sua conta antes da data de seu vencimento. Caso, por algum outro motivo, não seja possível a finalização do processo de pagamento da conta, mesmo após a confirmação de pagamento informada pelo site, a quantidade de pontos utilizada nesta operação será estornada para conta do Participante, que receberá um e-mail sobre referida impossibilidade.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-confirm">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('confirm')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <h3>Confira o as informações antes de finalizar a recarga.</h3>
+                        <div>
+                            <div class="flex-content">
+                                <strong>Tipo de conta:</strong>
+                                <p>Telefone e Internet</p>
+                            </div>
+                            <div class="flex-content">
+                                <strong>Favorecido:</strong>
+                                <p>XXXXXXXXXXX XX XXXXXX</p>
+                            </div>
+                            <div class="flex-content">
+                                <strong>Valor da conta:</strong>
+                                <p>R$ 130,80</p>
+                            </div>
+                            <div class="flex-content">
+                                <strong>Vencimento:</strong>
+                                <p>15/03/2025</p>
+                            </div>
+                        </div>
+                        <div class="btn-actions">
+                            <button class="btn cancel" onclick="closeModal('confirm')">Cancelar</button>
+                            <button class="btn confirm" onclick="closeModal('confirm')">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="footer">
