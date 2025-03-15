@@ -1,0 +1,107 @@
+@use 'vars';
+
+.extract {
+    padding: 40px 0;
+
+    .title {
+        font-weight: vars.$regular;
+        margin-bottom: 30px;
+        color: #424242;
+        @include vars.toRem(32px);
+    }
+
+    .subtitle {
+        font-weight: vars.$bolder;
+        color: #424242;
+        @include vars.toRem(22px);
+    }
+
+    .extract-filter {
+        margin-top: 20px;
+        @include vars.flexProp((display, flex),
+            (justify-content, flex-start),
+            (align-items, center));
+
+        .date {
+            padding: 15px;
+            width: 20%;
+            margin-right: 20px;
+            border-radius: 8px;
+            border: 1px solid #9377C6;
+            color: #aaa;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .table {
+        margin-top: 30px;
+        width: 100%;
+        border: 1px solid #9377C6;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .table-header,
+        .table-row {
+            padding: 20px;
+            border-bottom: 1px solid #9377C6;
+            color: #424242;
+            @include vars.toRem(16px);
+
+            @include vars.flexProp(
+                (display, flex),
+                (align-items, center),
+                (justify-content, space-between)
+            );
+
+            @media(max-width: vars.$bp992) {
+                @include vars.toRem(14px);
+            }
+
+            @media(max-width: vars.$bp500) {
+                @include vars.toRem(12px);
+            }
+
+            .cel:nth-child(1) { width: 25%; }
+            .cel:nth-child(2) { width: 45%; }
+            .cel:nth-child(3) { width: 20%; text-align: center; }
+            .cel:nth-child(4) { width: 10%; text-align: center; }
+
+            @media (max-width: 768px) {
+                .cel:nth-child(1) { width: 30%; }
+                .cel:nth-child(2) { width: 40%; }
+                .cel:nth-child(3) { width: 20%; }
+                .cel:nth-child(4) { width: 10%; }
+            }
+        }
+
+        .table-header {
+            color: #9377C6;
+            font-weight: vars.$bold;
+            @include vars.toRem(16px);
+
+            @media(max-width: vars.$bp500) {
+                @include vars.toRem(12px);
+            }
+        }
+
+        .table-flex {
+            @include vars.flexProp(
+                (display, flex),
+                (justify-content, flex-end)
+            );
+
+            .saldo {
+                width: 20%;
+                padding: 20px;
+                background-color: #9377C6;
+                color: #fff;
+                text-align: center;
+
+                @media(max-width: vars.$bp768) { width: 40%; }
+            }
+        }
+    }
+}

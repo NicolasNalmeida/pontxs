@@ -10,6 +10,7 @@
 
     .banner-resgate {
         margin-top: 30px;
+        width: 100%;
     }
 
     .flex-recarga {
@@ -26,6 +27,18 @@
 
             .form-group {
                 margin-bottom: 30px;
+
+                &.pts { position: relative; margin-bottom: 5px; }
+
+                &.pts::before {
+                    content: "pts";
+                    position: absolute;
+                    bottom: 13px;
+                    right: 15px;
+                    font-weight: vars.$bold;
+                    color: #9377C6;
+                    @include vars.toRem(20px);
+                }
 
                 label {
                     font-weight: vars.$bold;
@@ -45,8 +58,61 @@
                     border-radius: 10px;
                     padding: 12px;
                 }
+
+                .flex-check {
+                    @include vars.flexProp(
+                        (display, flex),
+                        (align-items, center),
+                        (justify-content, space-between)
+                    );
+
+                    .check-group {
+                        @include vars.flexProp(
+                            (display, flex),
+                            (align-items, center),
+                            (justify-content, space-between)
+                        );
+
+                        input[type="radio"] {
+                            display: none;
+                        }
+
+                        label {
+                            margin-left: 8px;
+                            @include vars.toRem(14px);
+                        }
+
+                        .check-style {
+                            position: relative;
+                            width: 20px;
+                            height: 20px;
+                            display: inline-block;
+                            border-radius: 50%;
+                            border: 1px solid #471785;
+                        }
+
+                        input[type="radio"]:checked + .check-style::before {
+                            content: "";
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            @include vars.prefix(transform, translate(-50%, -50%));
+                            background-color: #471785;
+                        }
+                    }
+                }
             }
 
+            .obs {
+                color: #555;
+                margin-bottom: 30px;
+                display: block;
+                @include vars.toRem(16px);
+            }
         }
 
         .resume {
@@ -65,7 +131,8 @@
                 border-radius: 10px;
 
                 .resume-label {
-                    width: 70%;
+                    width: 100%;
+                    margin-bottom: 10px;
                     @include vars.flexProp(
                         (display, flex),
                         (justify-content, space-between),
@@ -76,12 +143,14 @@
                         font-weight: vars.$bold;
                     }
 
-                    label, p {
-                        width: 50%;
+                    label {
+                        width: 35%;
                         color: #555555;
                         margin-bottom: 10px;
-                        @include vars.toRem(20px);
+                        @include vars.toRem(16px);
                     }
+
+                    p { width: 60%; }
                 }
 
                 .points-finish {
@@ -115,6 +184,7 @@
                 }
 
                 .finish-btn {
+                    cursor: pointer;
                     margin-top: 30px;
                     width: 100%;
                     padding: 20px;
@@ -169,6 +239,21 @@
                         }
                     }
                 }
+            }
+        }
+
+        .redeem {
+            border-top: 1px solid #ddd;
+            padding-top: 25px;
+            label { color: #555; }
+            .points {
+                margin-top: 10px;
+                @include vars.flexProp(
+                    (display, flex)
+                );
+
+                color: #9377C6;
+                @include vars.toRem(30px);
             }
         }
     }

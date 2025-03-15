@@ -60,17 +60,38 @@ function modal(status) {
     });
 }
 
-function openBuyModal() {
-    const modalContent = document.querySelector('.modal-comprar');
-    modalContent.classList.add('show')
+function openModal(type) {
+    if (type === 'comprar') {
+        const modalContent = document.querySelector('.modal-comprar');
+        modalContent.classList.add('show')
+    } else if (type === 'termos') {
+        const modalContent = document.querySelector('.modal-terms');
+        modalContent.classList.add('show')
+    } else if (type === 'confirm') {
+        const modalContent = document.querySelector('.modal-confirm');
+        modalContent.classList.add('show')
+    }  else if (type === 'confirm-success') {
+        const modalContent = document.querySelector('.modal-sucess');
+        modalContent.classList.add('show')
+
+        document.querySelector('.modal-confirm').classList.remove('show')
+    }
 }
 
-function closeBuyModal() {
-    const modalClose = document.querySelector('.modal-comprar .close');
-    const modalContent = document.querySelector('.modal-comprar');
-    console.log(modalClose)
-    
-    modalContent.classList.remove('show')
+function closeModal(type) {
+    if (type === 'comprar') {
+        const modalContent = document.querySelector('.modal-comprar');    
+        modalContent.classList.remove('show')
+    } else if (type === 'termos') {
+        const modalContent = document.querySelector('.modal-terms');    
+        modalContent.classList.remove('show')
+    } else if (type === 'confirm') {
+        const modalContent = document.querySelector('.modal-confirm');    
+        modalContent.classList.remove('show')
+    } else if (type === 'confirm-success') {
+        const modalContent = document.querySelector('.modal-sucess');    
+        modalContent.classList.remove('show')
+    }
 }
 
 (function addCart() {
@@ -78,24 +99,28 @@ function closeBuyModal() {
     const closeCart = document.querySelector('.add-cart .close')
     const cartModal = document.querySelector('.add-cart')
 
-    addItem.addEventListener('click', function() {
-        cartModal.classList.add('show')
-    })
+    if (addItem) {
+        addItem.addEventListener('click', function() {
+            cartModal.classList.add('show')
+        })
+    }
 
-    closeCart.addEventListener('click', function() {
-        cartModal.classList.remove('show')
-    })
+    if (closeCart) {
+        closeCart.addEventListener('click', function() {
+            cartModal.classList.remove('show')
+        })
+    }
 
-    setTimeout(() => {
-        cartModal.classList.remove('show')
-    }, 5000);
+    if (cartModal) {
+        setTimeout(() => {
+            cartModal.classList.remove('show')
+        }, 5000);
+    }
 })();
 
 function modalFirstAccess() {
     var modal = document.querySelector('.modal-first-access')
-    var close = document.querySelector('.modal-first-access .close')
-
-    console.log(modal)    
+    var close = document.querySelector('.modal-first-access .close')  
 
     modal.classList.add('show');
     

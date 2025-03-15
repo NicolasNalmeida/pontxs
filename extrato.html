@@ -125,156 +125,45 @@
             <i class="bi bi-search"></i>
         </button>
     </form>
-
-    <main class="recarga">
+    
+    <main class="extract">
         <section class="container">
+            <h1 class="title">Meu Extrato</h1>
             <nav class="breadcrumb">
                 <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Ar e Ventilação</a> <i class="bi bi-chevron-right"></i> <span>Ventilador de Mesa</span>
             </nav>
-
-            <h1 class="title">Recarga de Celular</h1>
-            <picture>
-                <source media="(max-width: 768px)" srcset="https://dummyimage.com/768x450/000/fff">
-                <img class="banner-resgate" src="assets/img/banner-resgate.png">
-            </picture>
-
-            <form class="recarga">
-                <div class="flex-recarga">
-                    <div class="form-content">
-                        <div class="form-group">
-                            <label>Operadora:</label>
-                            <select class="select">
-                                <option>Selecione</option>
-                                <option value="Tim">Tim</option>
-                                <option value="Vivo">Vivo</option>
-                                <option value="Claro">Claro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>(DDD) Número do celular:</label>
-                            <input type="text" class="input" placeholder="Insira o número de celular">
-                        </div>
-                        <div class="form-group">
-                            <label>Valor da Recarga:</label>
-                            <select class="select">
-                                <option>Selecione</option>
-                                <option value="10">R$10,00</option>
-                                <option value="20">R$20,00</option>
-                                <option value="30">R$30,00</option>
-                                <option value="40">R$40,00</option>
-                                <option value="50">R$50,00</option>
-                                <option value="60">R$60,00</option>
-                                <option value="70">R$70,00</option>
-                                <option value="80">R$80,00</option>
-                                <option value="90">R$90,00</option>
-                                <option value="100">R$100,00</option>
-                            </select>
-                        </div>
-                        <div class="redeem">
-                            <label>Resgate por:</label>
-                            <div class="points">
-                                <i class="bi bi-database"></i>
-                                <p><strong>20</strong> pontos</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume">
-                        <h3>Resumo da recarga:</h3>
-                        <div class="resume-content">
-                            <div class="resume-label">
-                                <label>Operadora:</label> <p>Vivo</p>
-                            </div>
-                            <div class="resume-label">
-                                <label>Celular:</label> <p>(11) 97170-8188</p>
-                            </div>
-                            <div class="resume-label">
-                                <label>Valor da recarga:</label> <p>R$ 15,00</p>
-                            </div>
-                            <div class="resume-label points-finish">
-                                <label>Pontos Utilizados:</label> <p>20 pontos</p>
-                            </div>
-                            <div class="terms">
-                                <input type="checkbox" class="check" id="check">
-                                <label for="check">Li e aceito o <a href="javascript:;" onclick="openModal('termos')">Termo de uso</a></label>
-                            </div>
-                            <button type="button" class="finish-btn" onclick="openModal('confirm')">Finalizar resgate</button>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="subtitle">Filtrar por período</h3>
+            <form class="extract-filter">
+                <input type="date" class="date start">
+                <input type="date" class="date end">
             </form>
+
+            <section class="table">
+                <header class="table-header">
+                    <span class="cel">Realizado em:</span>
+                    <span class="cel">Descrição:</span>
+                    <span class="cel">Crédito:</span>
+                    <span class="cel">Débito:</span>
+                </header>
+                <div class="table-row">
+                    <span class="cel">15/01/2025 14:19:35</span>
+                    <span class="cel">[PED: 062393] Débito referente a compra em Loja Virtual Casas Bahia</span>
+                    <span class="cel">0</span>
+                    <span class="cel">154</span>
+                </div>
+                <div class="table-row">
+                    <span class="cel">30/01/2025 9:30:22</span>
+                    <span class="cel">[PED: 0623934] Débito referente a compra em Loja Virtual Magazine Luíza</span>
+                    <span class="cel">0</span>
+                    <span class="cel">230</span>
+                </div>
+                <div class="table-flex">
+                    <span class="saldo">Saldo: 6</span>
+                </div>
+            </section>
         </section>
-        <div class="modal-terms">
-            <div class="content">
-                <div class="effect">
-                    <span class="close" onclick="closeModal('termos')">
-                        <i class="bi bi-x-circle-fill"></i>
-                    </span>
-                    <div>
-                        <h3>Termo de Uso</h3>
-                        <p>O que é a Recarga de Celular?</p>
-                        <p>A recarga é um crédito inserido de forma automática de qualquer região do Brasil, conforme políticas de cada Operadora de forma prática e segura.</p>
-                        <p>Atenção: Os valores podem sofrer alterações sem aviso prévio de acordo com a região de atuação de cada Operadora.</p>
-                        <p>As recargas são feitas em todo território nacional?</p>
-                        <p>Sim e de acordo com a política de cada Operadora. Esteja atento as regiões de abrangência, pois elas podem sofrer alterações de acordo com sua Operadora.</p>
-                        <p>Após resgate, em quanto tempo minha recarga estará disponível em meu celular?</p>
-                        <p>A recarga pode levar até 96 horas para ser disponibilizada no telefone. E se você efetuou mais de uma recarga, os créditos serão disponibilizados de forma gradativa e individual em até 96hs.</p>
-                        <p>Atenção: Não é possível realizar duas recargas em um mesmo celular em menos de três minutos entre uma recarga e outra.</p>
-                        <p>Qual o prazo de arrependimento? Como devo proceder?</p>
-                        <p>Não é possível fazer o cancelamento das recargas após a efetivação da mesma.</p>
-                        <p>Qual a validade da minha recarga?</p>
-                        <p>A validade da recarga está relacionada a política de cada operadora.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-confirm">
-            <div class="content">
-                <div class="effect">
-                    <span class="close" onclick="closeModal('confirm')">
-                        <i class="bi bi-x-circle-fill"></i>
-                    </span>
-                    <div>
-                        <h3>Confira o as informações antes de finalizar a recarga.</h3>
-                        <div>
-                            <div class="flex-content">
-                                <strong>Operadora:</strong>
-                                <p>Vivo</p>
-                            </div>
-                            <div class="flex-content">
-                                <strong>Celular:</strong>
-                                <p>(11) 97170-8188</p>
-                            </div>
-                            <div class="flex-content">
-                                <strong>Valor da recarga:</strong>
-                                <p>R$ 15,00</p>
-                            </div>
-                        </div>
-                        <span class="warning"><b>Importante:</b> As recargas de celular são válidas apenas para celulares de planos pré-pagos ou controle.</span>
-                        <div class="btn-actions">
-                            <button class="btn cancel" onclick="closeModal('confirm')">Cancelar</button>
-                            <button class="btn confirm" onclick="openModal('confirm-success')">Confirmar Recarga</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-sucess">
-            <div class="content">
-                <div class="effect">
-                    <span class="close" onclick="closeModal('confirm-success')">
-                        <i class="bi bi-x-circle-fill"></i>
-                    </span>
-                    <div>
-                        <i class="bi bi-check-lg icon sucess"></i>
-                        <div>
-                            <strong class="message">Recarga de celular<br> realizada com sucesso.</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
-    
+
     <footer class="footer">
         <nav class="nav-footer">
             <div class="container">

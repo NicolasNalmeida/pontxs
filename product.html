@@ -207,7 +207,7 @@
                                 </div>
                                 <div class="btn-content">
                                     <button class="add-bag">Adicionar à sacola</button>
-                                    <button class="redeem-btn" onclick="openBuyModal()">Resgatar agora</button>
+                                    <button class="redeem-btn" onclick="openModal('comprar')">Resgatar agora</button>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +320,7 @@
     <div class="modal-comprar">
         <div class="content">
             <div class="effect">
-                <span class="close" onclick="closeBuyModal()">
+                <span class="close" onclick="closeModal('comprar')">
                     <i class="bi bi-x-circle-fill"></i>
                 </span>
                 <div>
@@ -328,8 +328,8 @@
                     <span class="variation">110v</span>
 
                     <div class="btn-actions">
-                        <button class="btn cancel" onclick="closeBuyModal()">Cancelar</button>
-                        <button class="btn confirm" onclick="closeBuyModal()">Confirmar</button>
+                        <button class="btn cancel" onclick="closeModal('comprar')">Cancelar</button>
+                        <button class="btn confirm" onclick="closeModal('comprar')">Confirmar</button>
                     </div>
                 </div>
             </div>
