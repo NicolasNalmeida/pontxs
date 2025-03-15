@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger" onclick="openCloseMenu('open')">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png">
+            </figure>
+
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png">
+
+                    <nav class="drop-user">
+                        <a href="javascript:;">Minha Conta</a>
+                        <a href="javascript:;">Lorem Ipsum</a>
+                        <a href="javascript:;">Lorem Dolor</a>
+                        <a href="javascript:;">Sair</a>
+                    </nav>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="menu-list container">
+            <li class="close-item">
+                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
+            </li>
+            <li class="item-menu">
+                <a class="selected link-item" href="javascript:;">Categorias <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Lojas <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Serviços <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Cartões e Vales <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Doações <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+
+    <main class="recarga">
+        <section class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Serviços</a> <i class="bi bi-chevron-right"></i> <span>Pagamento de Contas</span>
+            </nav>
+
+            <h1 class="title">Pagamento de Contas</h1>
+            <picture>
+                <source media="(max-width: 768px)" srcset="https://dummyimage.com/768x450/000/fff">
+                <img class="banner-resgate" src="assets/img/banner-pag-contas.png">
+            </picture>
+
+            <form class="recarga">
+                <div class="flex-recarga">
+                    <div class="form-content">
+                        <div class="form-group">
+                            <label>Tipo de conta:</label>
+                            <select class="select">
+                                <option>Selecione</option>
+                                <option value="Conta de Luz">Conta de Luz</option>
+                                <option value="Conta de Água">Conta de Água</option>
+                                <option value="Conta de telefone e internet">Conta de telefone e internet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Código de barras:</label>
+                            <input type="text" class="input" placeholder="Insira o Código">
+                        </div>
+                        <div class="redeem">
+                            <label>Resgate por:</label>
+                            <div class="points">
+                                <i class="bi bi-database"></i>
+                                <p><strong>150</strong> pontos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume">
+                        <h3>Resumo do pagamento:</h3>
+                        <div class="resume-content">
+                            <div class="resume-label">
+                                <label>Tipo de conta:</label> <p>Conta de telefone e internet</p>
+                            </div>
+                            <div class="resume-label">
+                                <label>Favorecido:</label> <p>XXXXXXXXXXX XX XXXXXX</p>
+                            </div>
+                            <div class="resume-label">
+                                <label>Valor da conta:</label> <p>R$ 130,00</p>
+                            </div>
+                            <div class="resume-label">
+                                <label>Vencimento:</label> <p>15/03/2025</p>
+                            </div>
+                            <div class="resume-label points-finish">
+                                <label>Pontos Utilizados:</label> <p>150 pontos</p>
+                            </div>
+                            <div class="terms">
+                                <input type="checkbox" class="check" id="check">
+                                <label for="check">Li e aceito o <a href="#">Termo de uso</a></label>
+                            </div>
+                            <button class="finish-btn">Finalizar resgate</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
+                <img class="logo" src="assets/img/logo.png">
+            </figure>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
