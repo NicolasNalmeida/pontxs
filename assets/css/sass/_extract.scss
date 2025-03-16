@@ -20,7 +20,8 @@
         margin-top: 20px;
         @include vars.flexProp((display, flex),
             (justify-content, flex-start),
-            (align-items, center));
+            (align-items, center)
+        );
 
         .date {
             padding: 15px;
@@ -32,6 +33,31 @@
 
             &:last-child {
                 margin-right: 0;
+            }
+
+            @media(max-width: vars.$bp992) { width: 40%; }
+        }
+
+        .btn-search {
+            cursor: pointer;
+            background-color: #9377C6;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            transition: .3s;
+            @include vars.toRem(16px);
+
+            &:hover { border-radius: 50px; }
+        }
+
+        @media(max-width: vars.$bp600) {
+            @include vars.flexProp((flex-wrap, wrap));
+
+            .date,.btn-search {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
             }
         }
     }
