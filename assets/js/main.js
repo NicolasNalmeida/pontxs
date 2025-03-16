@@ -77,6 +77,9 @@ function openModal(type) {
     } else if (type === 'extrato') {
         const modalContent = document.querySelector('.modal-extrato');
         modalContent.classList.add('show')
+    } else if (type === 'address') {
+        const modalContent = document.querySelector('.modal-new-address');
+        modalContent.classList.add('show')
     }
 }
 
@@ -95,6 +98,9 @@ function closeModal(type) {
         modalContent.classList.remove('show')
     } else if (type === 'extrato') {
         const modalContent = document.querySelector('.modal-extrato');    
+        modalContent.classList.remove('show')
+    } else if (type === 'address') {
+        const modalContent = document.querySelector('.modal-new-address');    
         modalContent.classList.remove('show')
     }
 }
@@ -391,6 +397,12 @@ function openCloseDropdown(item) {
 
     tabItem.forEach(tab => {
         tab.addEventListener('click', function() {
+            tabItem.forEach(element => {
+                element.classList.remove('selected')
+            });
+
+            this.classList.add('selected')
+
             tabItem.forEach(tabRemove => {
                 tabRemove.classList.remove('show-form')
             });
