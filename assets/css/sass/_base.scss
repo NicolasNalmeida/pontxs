@@ -20,7 +20,8 @@ html, body {
 .modal-comprar,
 .modal-terms,
 .modal-confirm,
-.modal-sucess {
+.modal-sucess,
+.modal-extrato {
     transition: .3s;
     opacity: 0;
     visibility: hidden;
@@ -324,6 +325,44 @@ html, body {
             font-weight: vars.$semiBold;
             margin-bottom: 10px;
             line-height: 25px;
+        }
+    }
+}
+
+.modal-extrato {
+    .content {
+        width: 40%;
+
+        @media(max-width: vars.$bp1600) {
+            width: 45%;
+        }
+
+        @media(max-width: vars.$bp992) {
+            width: 60%;
+        }
+
+        @media(max-width: vars.$bp680) {
+            width: 80%;
+        }
+
+        @media(max-width: vars.$bp480) {
+            width: 95%;
+        }
+
+        h3,p {
+            text-align: left;
+            color: #424242;
+        }
+
+        p {
+            font-weight: vars.$semiBold;
+            word-break: break-word;
+            @include vars.toRem(16px);
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            @include vars.toRem(20px);
         }
     }
 }

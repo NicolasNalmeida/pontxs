@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger" onclick="openCloseMenu('open')">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png">
+            </figure>
+
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png">
+
+                    <nav class="drop-user">
+                        <a href="javascript:;">Minha Conta</a>
+                        <a href="javascript:;">Lorem Ipsum</a>
+                        <a href="javascript:;">Lorem Dolor</a>
+                        <a href="javascript:;">Sair</a>
+                    </nav>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="menu-list container">
+            <li class="close-item">
+                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
+            </li>
+            <li class="item-menu">
+                <a class="selected link-item" href="javascript:;">Categorias <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Lojas <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Serviços <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Cartões e Vales <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Doações <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    
+    <main class="extract">
+        <section class="container">
+            <h1 class="title">Meus Pedidos</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="catalogo.html">Ar e Ventilação</a> <i class="bi bi-chevron-right"></i> <span>Ventilador de Mesa</span>
+            </nav>
+            <h3 class="subtitle">Filtrar por período</h3>
+            <form class="extract-filter">
+                <input type="date" class="date start">
+                <input type="date" class="date end">
+                <button class="btn-search">Pesquisar</button>
+            </form>
+
+            <section class="table-pedido">
+                <header class="table-header">
+                    <div class="div-header">
+                        <label class="lb-cel">Número do pedido:</label>
+                        <span>062393</span>
+                    </div>
+                    <div class="div-header">
+                        <label class="lb-cel">Realizado em:</label>
+                        <span>15/01/2025 14:19:35</span>
+                    </div>
+                    <div class="div-header">
+                        <label class="lb-cel">Status:</label>
+                        <span>Concluído</span>
+                    </div>
+                    <div class="div-header">
+                        <label class="lb-cel">Entregue em:</label>
+                        <span>30/01/2025 </span>
+                    </div>
+                    <div class="div-header sm">
+                        <span onclick="openModal('extrato')" class="track">Rastrear pedido <i class="icon bi bi-truck"></i></span>
+                    </div>
+                </header>
+                <div class="row">
+                    <div class="table-body">
+                        <div class="div-body">
+                            <img width="50" height="50" src="assets/img/prod-1.png">
+                        </div>
+                        <div class="div-body">
+                            <p>Conjunto com 6 Pratos Rasos Tramontina Leonora em Porcelana 25 cm - Branco</p>
+                        </div>
+                        <div class="div-body sm">
+                            <a href="javascript:;" class="open-tab">Abrir detalhe <i class="icon bi bi-chevron-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="table-colapse">
+                        <div class="div-body">
+                            <h4>Detalhes do Pedido</h4>
+                            <ul>
+                                <li>Quantidade: 01</li>
+                                <li>Pontos: 154</li>
+                                <li>Loja Virtual Casas Bahia</li>
+                                <li>Endereço de Entrega: Avenida dos Estados  5350  Vila Metalúrgica - Santo André - SP  CEP: 09220570</li>
+                                <li>Frete: 0,00</li>
+                            </ul>
+                        </div>
+                        <div class="div-body sm">
+                            <a href="javascript:;" class="close-tab">Fechar detalhe <i class="icon bi bi-chevron-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+        <div class="modal-extrato">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('extrato')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <h3>Tracking do Pedido</h3>
+                        <p>===============Pedido: 62393 ===============</p>
+                        <br>
+                        <p>Produto: Conjunto com 6 Pratos Rasos Tramontina Leonora em Porcelana 25 cm - Branco</p>
+                        <p>Quantidade: 1</p>
+                        <br>
+                        <p>=============== Histórico ====================</p>
+                        <br>
+                        <p>Status: Pagamento aprovado. Seu pedido foi encaminhado para preparação.</p>
+                        <p>Atualizado em: 15/01/2025 14:24</p>
+                        <br>
+                        <p>===========================================</p>
+                        <br>
+                        <p>Status: AGUARDANDO ESTOQUE XD</p>
+                        <p>Atualizado em: 15/01/2025 14:24</p>
+                        <br>
+                        <p>=============== Dados da Entrega ====================</p>
+                        <br>
+                        <p>Transportadora: ASAP LOG LOGISTICA E SOLUCOES</p>
+                        <p>Entrega prevista para: 20/02/2025 00:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
+                <img class="logo" src="assets/img/logo.png">
+            </figure>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

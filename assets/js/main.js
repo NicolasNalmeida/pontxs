@@ -73,8 +73,10 @@ function openModal(type) {
     }  else if (type === 'confirm-success') {
         const modalContent = document.querySelector('.modal-sucess');
         modalContent.classList.add('show')
-
         document.querySelector('.modal-confirm').classList.remove('show')
+    } else if (type === 'extrato') {
+        const modalContent = document.querySelector('.modal-extrato');
+        modalContent.classList.add('show')
     }
 }
 
@@ -90,6 +92,9 @@ function closeModal(type) {
         modalContent.classList.remove('show')
     } else if (type === 'confirm-success') {
         const modalContent = document.querySelector('.modal-sucess');    
+        modalContent.classList.remove('show')
+    } else if (type === 'extrato') {
+        const modalContent = document.querySelector('.modal-extrato');    
         modalContent.classList.remove('show')
     }
 }
@@ -398,6 +403,31 @@ function openCloseDropdown(item) {
             const contentTab = document.getElementById(this.dataset.id)
 
             contentTab.classList.add('show-form')
+        })
+    });
+})();
+
+(function extratoTabs() {
+    var openColapse = document.querySelectorAll('.open-tab')
+    var closeColapse = document.querySelectorAll('.close-tab')
+    
+    openColapse.forEach(el => {
+        el.addEventListener('click', function() {
+            const colapseTable = this.closest('.row').querySelector('.table-colapse')
+            colapseTable.classList.add('open')
+
+            this.style.opacity = '0'
+            this.style.visibility = 'hidden'
+        })
+    });
+
+    closeColapse.forEach(el => {
+        el.addEventListener('click', function() {
+            const colapseTable = this.closest('.row').querySelector('.table-colapse')
+            colapseTable.classList.remove('open')
+
+            this.closest('.row').querySelector('.open-tab').style.opacity = '1'
+            this.closest('.row').querySelector('.open-tab').style.visibility = 'visible'
         })
     });
 })();
