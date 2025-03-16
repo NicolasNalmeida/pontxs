@@ -358,7 +358,7 @@ function openCloseDropdown(item) {
     });
 })();
 
-(function() {
+(function productTabs() {
     var tabItem = document.querySelectorAll('.tab-item');
     var tabTextContent = document.querySelectorAll('.tab-content-item')
 
@@ -376,6 +376,28 @@ function openCloseDropdown(item) {
             const contentTab = document.getElementById(this.dataset.id)
 
             contentTab.classList.add('selected')
+        })
+    });
+})();
+
+(function profileTabs() {
+    var tabItem = document.querySelectorAll('.profile-item');
+    var tabTextContent = document.querySelectorAll('.form-profile')
+
+    tabItem.forEach(tab => {
+        tab.addEventListener('click', function() {
+            tabItem.forEach(tabRemove => {
+                tabRemove.classList.remove('show-form')
+            });
+            this.classList.add('show-form')
+
+            tabTextContent.forEach(content => {
+                content.classList.remove('show-form')
+            });
+
+            const contentTab = document.getElementById(this.dataset.id)
+
+            contentTab.classList.add('show-form')
         })
     });
 })();
@@ -405,5 +427,3 @@ $(document).ready(function () {
         });
     });
 });
-
-

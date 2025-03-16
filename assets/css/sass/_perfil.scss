@@ -35,61 +35,79 @@
             }
         }
 
-        .profile-tabs ul {
-            @include vars.flexProp((display, flex));
-            margin: 40px 0 20px 0;
-            list-style: none;
-            padding: 0;
+        .profile-tabs {
+            margin-bottom: 40px;
+            ul {
+                @include vars.flexProp(
+                    (display, flex),
+                    (align-items, center)
+                );
+
+                .profile-item {
+                    cursor: pointer;
+                    color: #424242;
+                    margin-right: 40px;
+                    transition: .3s;
+                    border-bottom: 1px solid transparent;
+                    padding-bottom: 15px;
+                    @include vars.toRem(16px);
+                    @include vars.flexProp(
+                        (display, flex),
+                        (align-items, center)
+                    );
+
+                    &:last-child { margin-right: 0; }
+
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 15px;
+                        border-radius: 50%;
+                        border: 2px solid #424242;
+                        transition: .3s;
+                        @include vars.toRem(20px);
+                        @include vars.flexProp(
+                            (display, flex),
+                            (align-items, center),
+                            (justify-content, center)
+                        );
+                    }
+
+                    @media(max-width: vars.$bp500) {
+                        @include vars.toRem(14px);
+                        margin-right: 10px;
+
+                        .icon {
+                            width: 35px;
+                            height: 35px;
+                            @include vars.toRem(14px);
+                        }
+                    }
+
+                    &:hover {
+                        border-bottom: 1px solid #9377C6;
+                        color: #9377C6;
+
+                        .icon {
+                            color: #fff;
+                            background-color: #9377C6;
+                            border: 2px solid #9377C6;
+                        }
+                    }
+
+                    &.selected {
+                        border-bottom: 1px solid #9377C6;
+                        color: #9377C6;
+
+                        .icon {
+                            color: #fff;
+                            background-color: #9377C6;
+                            border: 2px solid #9377C6;
+                        }
+                    }
+                }
+            }
         }
-
-        .profile-tabs li {
-            margin-right: 50px;
-            border-bottom: 2px solid #9377c600;
-        }
-
-        .profile-tabs li[role="tab"] a {
-            @include vars.flexProp((display, flex),
-                (align-items, center));
-            gap: 10px;
-            text-decoration: none;
-            color: #4A4A4A;
-            @include vars.toRem(16px);
-            margin-bottom: 10px;
-        }
-
-        .profile-tabs li[role="tab"] a i {
-
-            color: #424242;
-            border: 3px solid #424242;
-            border-radius: 50%;
-            background-color: transparent;
-            padding: 10px;
-            transition: color 0.3s ease;
-        }
-
-        .profile-tabs li[role="tab"] span {
-            @include vars.toRem(16px);
-            font-family: vars.$fontMain;
-            color: #424242;
-        }
-
-        .profile-tabs li[role="tab"]:hover span {
-            color: #9377C6;
-        }
-
-        .profile-tabs li[role="tab"]:hover {
-            color: #9377C6;
-            /* Cor do texto no hover */
-            border-bottom: 2px solid #9377C6;
-            /* Borda inferior roxa no hover */
-        }
-
-        .profile-tabs li[role="tab"]:hover i {
-            color: #fff;
-            background-color: #9377C6;
-            border: 3px solid #9377C6;
-        }
-
 
         .profile-photo-section {
             .form-default {
@@ -205,13 +223,17 @@
                                 }
                             }
                         }
+
+                        @media(max-width: vars.$bp992) {
+                            width: 100%;
+                            max-width: 100%;
+
+                            .file-upload-box { width: 100%; max-width: 100%; }
+                        }
                     }
                 }
             }
         }
-
-
-
 
         .form-default {
             background-color: #F1F1F1;
@@ -375,7 +397,6 @@
             }
         }
 
-
         .info-and-checkbox {
             @include vars.flexProp((display, flex),
                 (justify-content, space-between),
@@ -441,9 +462,7 @@
         }
 
         @media(max-width: vars.$bp768) {
-
             .actions {
-
                 .btn-save {
                     padding: 15px 40px;
                     @include vars.toRem(14px);
@@ -452,7 +471,35 @@
             }
 
         }
+    }
 
+    .form-profile,
+    .form-address {
+        display: none;
 
+        &.show-form { display: block; }
+
+        .add-address {
+            cursor: pointer;
+            border: 1px solid transparent;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: transparent;
+            color: #9377C6;
+            transition: .3s;
+            @include vars.toRem(16px);
+            @include vars.flexProp(
+                (display, flex),
+                (align-items, center)
+            );
+
+            .icon {
+                color: #9377C6;
+                margin-right: 10px;
+                @include vars.toRem(30px);
+            }
+
+            &:hover { border: 1px solid #9377C6; }
+        }
     }
 }
