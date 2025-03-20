@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger" onclick="openCloseMenu('open')">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png">
+            </figure>
+
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png">
+
+                    <nav class="drop-user">
+                        <a href="javascript:;">Minha Conta</a>
+                        <a href="javascript:;">Lorem Ipsum</a>
+                        <a href="javascript:;">Lorem Dolor</a>
+                        <a href="javascript:;">Sair</a>
+                    </nav>
+                </figure>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul class="menu-list container">
+            <li class="close-item">
+                <a href="javascript:;" onclick="openCloseMenu('close')"><i class="bi bi-x-circle-fill"></i></a>
+            </li>
+            <li class="item-menu">
+                <a class="selected link-item" href="javascript:;">Categorias <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Lojas <i onclick="openCloseDropdown(this)" class="no-click bi bi-chevron-down"></i></a>
+                <ul class="drop-menu">
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Dolor</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Vitae a ducimus</a></li>
+                    <li class="drop-item"><a class="drop-link" href="javascript:;">Lorem Ipsum</a></li>
+                </ul>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Serviços <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Cartões e Vales <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+            <li class="item-menu">
+                <a href="javascript:;" class="link-item">Doações <i class="no-click bi bi-chevron-down"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    
+    <main class="cart">
+        <section class="container">
+            <h1 class="title">Meu Carrinho</h1>
+
+            <div class="flex-cart">
+                <div class="cart-content">
+                    <span class="warning">Os itens no carrinho não ficam reservados. Finalize seu resgate para garantir os produtos.</span>
+
+                    <div class="table-cart">
+                        <div class="table-item">
+                            <header class="header-item">
+                                <span class="cel">Itens</span>
+                                <span class="cel">Qtd</span>
+                                <span class="cel">Pontos</span>
+                                <span class="cel"></span>
+                            </header>
+                            <div class="body-item">
+                                <figure class="prod cel">
+                                    <span>Item</span>
+                                    <div class="sub-cel">
+                                        <img class="img-prod" src="assets/img/card-3.png">
+                                        <strong class="text-prod">Vale Físico Cinemark 3D</strong>
+                                    </div>
+                                </figure>
+                                <div class="qty cel">
+                                    <span>Qty</span>
+                                    <div class="sub-cel">
+                                        <button class="minus"><i class="bi bi-dash-lg"></i></button>
+                                        <input value="1000" type="text">
+                                        <button class="plus"><i class="bi bi-plus-lg"></i></button>
+                                    </div>
+                                </div>
+                                <div class="score cel">
+                                    <span>Pontos</span>
+                                    <strong class="sub-cel">58 pontos</strong>
+                                </div>
+                                <div class="action cel">
+                                    <span>Ação</span>
+                                    <div class="sub-cel">
+                                        <button>Remover <i class="bi bi-trash3"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shipping">
+                                <i class="icon bi bi-truck"></i>
+                                <div class="text">
+                                    <p>Fornecido e entregue por <strong>xxxxxxxxxxxxxxxx</strong></p>
+                                    <p>Frete: -</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-item">
+                            <div class="body-item">
+                                <figure class="prod cel">
+                                    <span>Item</span>
+                                    <div class="sub-cel">
+                                        <img class="img-prod" src="assets/img/card-3.png">
+                                        <strong class="text-prod">Vale Físico Cinemark 3D</strong>
+                                    </div>
+                                </figure>
+                                <div class="qty cel">
+                                    <span>Qty</span>
+                                    <div class="sub-cel">
+                                        <button class="minus"><i class="bi bi-dash-lg"></i></button>
+                                        <input value="1000" type="text">
+                                        <button class="plus"><i class="bi bi-plus-lg"></i></button>
+                                    </div>
+                                </div>
+                                <div class="score cel">
+                                    <span>Pontos</span>
+                                    <strong class="sub-cel">58 pontos</strong>
+                                </div>
+                                <div class="action cel">
+                                    <span>Ação</span>
+                                    <div class="sub-cel">
+                                        <button>Remover <i class="bi bi-trash3"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shipping">
+                                <i class="icon bi bi-truck"></i>
+                                <div class="text">
+                                    <p>Fornecido e entregue por <strong>xxxxxxxxxxxxxxxx</strong></p>
+                                    <p>Frete: -</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-shipping"></div>
+                </div>
+                <div class="cart-resume">
+                    <h2 class="sub-title">Resumo do resgate</h2>
+                    <div class="resume-content">
+                        <div class="flex-resume">
+                            <span>Itens (2)</span>
+                            <span>253 pontos</span>
+                        </div>
+                        <div class="flex-resume">
+                            <span>Frete</span>
+                            <span>50 pontos</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <strong>Subtotal:</strong>
+                        <strong>303 pontos</strong>
+                    </div>
+                    <div class="redeem">
+                        <button class="btn on">Concluir Resgate</button>
+                        <button class="btn">Achar mais produtos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do pedido.</figcaption>
+                <img class="logo" src="assets/img/logo.png">
+            </figure>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
