@@ -73,8 +73,13 @@ function openModal(type) {
     }  else if (type === 'confirm-success') {
         const modalContent = document.querySelector('.modal-sucess');
         modalContent.classList.add('show')
-
         document.querySelector('.modal-confirm').classList.remove('show')
+    } else if (type === 'extrato') {
+        const modalContent = document.querySelector('.modal-extrato');
+        modalContent.classList.add('show')
+    } else if (type === 'address') {
+        const modalContent = document.querySelector('.modal-new-address');
+        modalContent.classList.add('show')
     }
 }
 
@@ -90,6 +95,12 @@ function closeModal(type) {
         modalContent.classList.remove('show')
     } else if (type === 'confirm-success') {
         const modalContent = document.querySelector('.modal-sucess');    
+        modalContent.classList.remove('show')
+    } else if (type === 'extrato') {
+        const modalContent = document.querySelector('.modal-extrato');    
+        modalContent.classList.remove('show')
+    } else if (type === 'address') {
+        const modalContent = document.querySelector('.modal-new-address');    
         modalContent.classList.remove('show')
     }
 }
@@ -358,7 +369,7 @@ function openCloseDropdown(item) {
     });
 })();
 
-(function() {
+(function productTabs() {
     var tabItem = document.querySelectorAll('.tab-item');
     var tabTextContent = document.querySelectorAll('.tab-content-item')
 
@@ -376,6 +387,59 @@ function openCloseDropdown(item) {
             const contentTab = document.getElementById(this.dataset.id)
 
             contentTab.classList.add('selected')
+        })
+    });
+})();
+
+(function profileTabs() {
+    var tabItem = document.querySelectorAll('.profile-item');
+    var tabTextContent = document.querySelectorAll('.form-profile')
+
+    tabItem.forEach(tab => {
+        tab.addEventListener('click', function() {
+            tabItem.forEach(element => {
+                element.classList.remove('selected')
+            });
+
+            this.classList.add('selected')
+
+            tabItem.forEach(tabRemove => {
+                tabRemove.classList.remove('show-form')
+            });
+            this.classList.add('show-form')
+
+            tabTextContent.forEach(content => {
+                content.classList.remove('show-form')
+            });
+
+            const contentTab = document.getElementById(this.dataset.id)
+
+            contentTab.classList.add('show-form')
+        })
+    });
+})();
+
+(function extratoTabs() {
+    var openColapse = document.querySelectorAll('.open-tab')
+    var closeColapse = document.querySelectorAll('.close-tab')
+    
+    openColapse.forEach(el => {
+        el.addEventListener('click', function() {
+            const colapseTable = this.closest('.row').querySelector('.table-colapse')
+            colapseTable.classList.add('open')
+
+            this.style.opacity = '0'
+            this.style.visibility = 'hidden'
+        })
+    });
+
+    closeColapse.forEach(el => {
+        el.addEventListener('click', function() {
+            const colapseTable = this.closest('.row').querySelector('.table-colapse')
+            colapseTable.classList.remove('open')
+
+            this.closest('.row').querySelector('.open-tab').style.opacity = '1'
+            this.closest('.row').querySelector('.open-tab').style.visibility = 'visible'
         })
     });
 })();
@@ -405,5 +469,3 @@ $(document).ready(function () {
         });
     });
 });
-
-

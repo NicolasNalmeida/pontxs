@@ -80,189 +80,283 @@
                 </nav>
             </div>
 
-            <nav role="tablist" class="profile-tabs">
+            <nav class="profile-tabs">
                 <ul>
-                    <li role="tab" aria-selected="true" aria-controls="dados-pessoais">
-                        <a href="#" id="show-or-hide">
-                            <i class="bi bi-person" aria-label="Ícone de Dados Pessoais"></i>
-                            <span>Dados Pessoais</span>
-                        </a>
+                    <li class="profile-item selected" data-id="profile">
+                        <i class="bi bi-person icon" aria-label="Ícone de Dados Pessoais"></i>
+                        <span>Dados Pessoais</span>
                     </li>
-                    <li role="tab" aria-selected="false" aria-controls="meus-enderecos">
-                        <a  href="#" id="show-or-hide">
-                            <i class="bi bi-house-door" aria-label="Ícone de Endereços Pessoais"></i>
-                            <span>Meus Endereços</span>
-                        </a>
+                    <li class="profile-item" data-id="address">
+                        <i class="bi bi-house-door icon" aria-label="Ícone de Endereços Pessoais"></i>
+                        <span>Meus Endereços</span>
                     </li>
                 </ul>
             </nav>
-
-            <section id="meus-enderecos" class="meus-enderecos form-default">
-                <button class="form-ep">Endereço Principal</button>
-                <div class="form-1">
-                    <div class="form-control endereco">
-                        <label for="logradouro" class="label">Endereço<span class="required">*</span></label>
-                        <input class="input" type="text" name="logradouro" id="logradouro" placeholder="Rua, Av.">
-                    </div>
-                    <div class="form-control numeros">
-                        <label for="numero" class="label">Número <span class="required">*</span></label>
-                        <input class="input" type="text" name="numero" id="numero" placeholder="Número">
-                    </div>
-                </div>
-                <div class="form-2">
-                    <div class="form-control">
-                        <label for="complemento" class="label">Complemento</label>
-                        <input class="input" type="text" name="complemento" id="complemento" placeholder="Complemento">
-                    </div>
-                    <div class="form-control">
-                        <label for="bairro" class="label">Bairro <span class="required">*</span></label>
-                        <input class="input" type="text" name="bairro" id="bairro" placeholder="Bairro">
-                    </div>
-                </div>
-                <div class="form-3">
-                    <div class="form-control">
-                        <label for="cidade" class="label">Cidade <span class="required">*</span></label>
-                        <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
-                    </div>
-                    <div class="form-control">
-                        <label for="estado" class="label">Estado <span class="required">*</span></label>
-                        <input class="input" type="text" name="estado" id="estado" placeholder="Estado">
-                    </div>
-                    <div class="form-control">
-                        <label for="cep" class="label">CEP <span class="required">*</span></label>
-                        <input class="input" type="text" name="cep" id="cep" placeholder="00000-000">
-                    </div>
-                </div>
-                <div class="info-and-checkbox">
-                    <div class="info-obrigatorios">
-                        Campos com <span>*</span> possuem campo de preenchimento obrigatório
-                    </div>
-                    <div class="terms-checkbox">
-                        <input type="checkbox" id="terms" name="terms" />
-                        <label for="terms" class="check-descricao">
-                            Endereço Principal
-                        </label>
-                    </div>
-                </div>
-                <div class="actions">
-                    <button type="submit" class="btn-save">Salvar</button>
-                </div>
-            </section>
     
-
-            <section id="dados-pessoais" class="profile-photo-section">
-                <div class="form-default">
-                    <div class="form-control">
-                        <figure class="profile-photo-preview">
-                            <div class="profile-photo-preview-container">
-                                <img id="profile-image" src="assets/img/user-image-lg.png" alt="Foto de perfil do usuário">
-                                <figcaption>
-                                    <button class="btn-change-photo" id="change-photo">Alterar imagem</button>
-                                </figcaption>
-                            </div>
-                        </figure>
-                        <div class="profile-photo-upload">
-                            <label for="file-upload" class="file-upload-label">Foto do perfil:</label>
-                            <div class="file-upload-box">
-                                <i class="bi bi-cloud-upload" aria-hidden="true"></i>
-                                <span id="file-upload-description">Arraste ou cole um arquivo aqui ou <br> escolha uma
-                                    opção abaixo:</span>
-                                <input type="file" id="file-upload" accept="image/*"
-                                    aria-label="Upload de foto de perfil" tabindex="-1"
-                                    aria-describedby="file-upload-description">
-                                <div class="upload-buttons-container">
-                                    <button class="btn-upload" id="choose-image">Escolha uma imagem</button>
-                                    <button class="btn-upload" id="take-photo">Tire uma foto</button>
+            <form class="form-profile show-form" id="profile">
+                <div class="profile-photo-section">
+                    <div class="form-default">
+                        <div class="form-control">
+                            <figure class="profile-photo-preview">
+                                <div class="profile-photo-preview-container">
+                                    <img id="profile-image" src="assets/img/user-image-lg.png" alt="Foto de perfil do usuário">
+                                    <figcaption>
+                                        <button class="btn-change-photo" id="change-photo">Alterar imagem</button>
+                                    </figcaption>
+                                </div>
+                            </figure>
+                            <div class="profile-photo-upload">
+                                <label for="file-upload" class="file-upload-label">Foto do perfil:</label>
+                                <div class="file-upload-box">
+                                    <i class="bi bi-cloud-upload" aria-hidden="true"></i>
+                                    <span id="file-upload-description">Arraste ou cole um arquivo aqui ou <br> escolha uma
+                                        opção abaixo:</span>
+                                    <input type="file" id="file-upload" accept="image/*"
+                                        aria-label="Upload de foto de perfil" tabindex="-1"
+                                        aria-describedby="file-upload-description">
+                                    <div class="upload-buttons-container">
+                                        <button class="btn-upload" id="choose-image">Escolha uma imagem</button>
+                                        <button class="btn-upload" id="take-photo">Tire uma foto</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            
-            <section id="dados-pessoais" class="form-default">
-                <h2>Dados Pessoais</h2>
-                <div class="form-control">
-                    <label for="name" class="label">Nome <span class="required">*</span></label>
-                    <input class="input" type="text" name="nome" id="nome" placeholder="Nome">
-                </div>
-                <div class="form-3">
+                
+                <div class="form-default">
+                    <h2>Dados Pessoais</h2>
                     <div class="form-control">
-                        <label for="cpf" class="label">CPF <span class="required">*</span></label>
-                        <input class="input" type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
+                        <label for="name" class="label">Nome <span class="required">*</span></label>
+                        <input class="input" type="text" name="nome" id="nome" placeholder="Nome">
                     </div>
-                    <div class="form-control">
-                        <label for="dob" class="label">Data de Nascimento <span class="required">*</span></label>
-                        <input class="input" type="text" name="dob" id="dob" placeholder="00/00/0000">
-                    </div>
-                    <div class="form-control">
-                        <label for="gender" class="label">Sexo <span class="required">*</span></label>
-                        <select class="input" name="gender" id="gender">
-                            <option value="">Selecione</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-2">
-                    <div class="form-control">
-                        <label for="password" class="label">Sua senha <span class="required">*</span></label>
-                        <div class="input-container">
-                            <input class="input" type="password" name="password" id="password"
-                                placeholder="xxxxxxxxxxx">
+                    <div class="form-3">
+                        <div class="form-control">
+                            <label for="cpf" class="label">CPF <span class="required">*</span></label>
+                            <input class="input" type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
                         </div>
-                        <small class="des-senha">mínimo 8 caracteres</small>
-                    </div>
-                    <div class="form-control">
-                        <label for="confirm-password" class="label">Confirmar Senha <span
-                                class="required">*</span></label>
-                        <div class="input-container">
-                            <input class="input" type="password" name="confirm-password" id="confirm-password"
-                                placeholder="xxxxxxxxxxx">
+                        <div class="form-control">
+                            <label for="dob" class="label">Data de Nascimento <span class="required">*</span></label>
+                            <input class="input" type="text" name="dob" id="dob" placeholder="00/00/0000">
+                        </div>
+                        <div class="form-control">
+                            <label for="gender" class="label">Sexo <span class="required">*</span></label>
+                            <select class="input" name="gender" id="gender">
+                                <option value="">Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-            </section>
-            
-            <section id="dados-pessoais" class="form-default">
-                <h2>Telefones</h2>
-                <div class="form-3">
-                    <div class="form-control">
-                        <label for="celular" class="label">Celular <span class="required">*</span></label>
-                        <input class="input" type="text" name="celular" id="celular" placeholder="(xx) 00000-0000">
-                    </div>
-            
-                    <div class="form-control">
-                        <label for="telefone" class="label">Telefone</label>
-                        <input class="input" type="text" name="telefone" id="telefone" placeholder="(xx) 00000-0000">
-                    </div>
-                </div>
-            </section>
-            
-            <section id="dados-pessoais" class="form-default">
-                <h2>Outros Dados</h2>
-                <div class="form-4">
-                    <div class="form-control">
-                        <label for="email" class="label">E-mail <span class="required">*</span></label>
-                        <input class="input" type="email" name="email" id="email" placeholder="Insira o seu e-mail">
+                    <div class="form-2">
+                        <div class="form-control">
+                            <label for="password" class="label">Sua senha <span class="required">*</span></label>
+                            <div class="input-container">
+                                <input class="input" type="password" name="password" id="password"
+                                    placeholder="xxxxxxxxxxx">
+                            </div>
+                            <small class="des-senha">mínimo 8 caracteres</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="confirm-password" class="label">Confirmar Senha <span
+                                    class="required">*</span></label>
+                            <div class="input-container">
+                                <input class="input" type="password" name="confirm-password" id="confirm-password"
+                                    placeholder="xxxxxxxxxxx">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            
-            <section id="dados-pessoais" class="info-and-checkbox">
-                <div class="info-obrigatorios">
-                    Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                
+                <div class="form-default">
+                    <h2>Telefones</h2>
+                    <div class="form-3">
+                        <div class="form-control">
+                            <label for="celular" class="label">Celular <span class="required">*</span></label>
+                            <input class="input" type="text" name="celular" id="celular" placeholder="(xx) 00000-0000">
+                        </div>
+                
+                        <div class="form-control">
+                            <label for="telefone" class="label">Telefone</label>
+                            <input class="input" type="text" name="telefone" id="telefone" placeholder="(xx) 00000-0000">
+                        </div>
+                    </div>
                 </div>
-                <div class="terms-checkbox">
-                    <a href="#">Regulamento</a> e <a href="#">Termos de Uso</a>.
+                
+                <div class="form-default">
+                    <h2>Outros Dados</h2>
+                    <div class="form-4">
+                        <div class="form-control">
+                            <label for="email" class="label">E-mail <span class="required">*</span></label>
+                            <input class="input" type="email" name="email" id="email" placeholder="Insira o seu e-mail">
+                        </div>
+                    </div>
                 </div>
-            </section>
-            
-            <div id="dados-pessoais" class="actions">
-                <button type="submit" class="btn-save">Salvar</button>
-            </div>
+                
+                <div class="info-and-checkbox">
+                    <div class="info-obrigatorios">
+                        Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                    </div>
+                    <div class="terms-checkbox">
+                        <a href="#">Regulamento</a> e <a href="#">Termos de Uso</a>.
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </form>
 
+            <form class="form-profile" id="address">
+                <div class="meus-enderecos form-default">
+                    <button class="form-ep">Endereço Principal</button>
+                    <div class="form-1">
+                        <div class="form-control endereco">
+                            <label for="logradouro" class="label">Endereço<span class="required">*</span></label>
+                            <input class="input" type="text" name="logradouro" id="logradouro" placeholder="Rua, Av.">
+                        </div>
+                        <div class="form-control numeros">
+                            <label for="numero" class="label">Número <span class="required">*</span></label>
+                            <input class="input" type="text" name="numero" id="numero" placeholder="Número">
+                        </div>
+                    </div>
+                    <div class="form-2">
+                        <div class="form-control">
+                            <label for="complemento" class="label">Complemento</label>
+                            <input class="input" type="text" name="complemento" id="complemento" placeholder="Complemento">
+                        </div>
+                        <div class="form-control">
+                            <label for="bairro" class="label">Bairro <span class="required">*</span></label>
+                            <input class="input" type="text" name="bairro" id="bairro" placeholder="Bairro">
+                        </div>
+                    </div>
+                    <div class="form-3">
+                        <div class="form-control">
+                            <label for="cidade" class="label">Cidade <span class="required">*</span></label>
+                            <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
+                        </div>
+                        <div class="form-control">
+                            <label for="estado" class="label">Estado <span class="required">*</span></label>
+                            <input class="input" type="text" name="estado" id="estado" placeholder="Estado">
+                        </div>
+                        <div class="form-control">
+                            <label for="cep" class="label">CEP <span class="required">*</span></label>
+                            <input class="input" type="text" name="cep" id="cep" placeholder="00000-000">
+                        </div>
+                    </div>
+                    <div class="info-and-checkbox">
+                        <div class="info-obrigatorios">
+                            Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                        </div>
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" />
+                            <label for="terms" class="check-descricao">
+                                Endereço Principal
+                            </label>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button type="submit" class="btn-save">Salvar</button>
+                    </div>
+                </div>
+                <button type="button" class="add-address" onclick="openModal('address')"><i class="icon bi bi-plus-circle-fill"></i> Adicionar Endereço</button>
+            </form>
         </article>
+        <div class="modal-new-address">
+            <div class="content">
+                <div class="effect">
+                    <span class="close" onclick="closeModal('address')">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </span>
+                    <div>
+                        <h3>Novo Endereço</h3>
+                        <form class="address-form">
+                            <div class="form-control col-2">
+                                <div>
+                                    <label for="cep">Cep*</label>
+                                    <input type="text" name="cep" id="cep" placeholder="XXXXXXXXXXXXXXXXXXX">
+                                </div>
+                                <div>
+                                    <label for="address">Endereço*</label>
+                                    <input type="text" name="address" id="address" placeholder="XXXXXXXXXXXXXXXXXXX">
+                                </div>
+                            </div>
+                            <div class="form-control col-2">
+                                <div>
+                                    <label for="number">Número*</label>
+                                    <input type="text" name="number" id="number" placeholder="XXXXXXXXXXXXXXXXXXX">
+                                </div>
+                                <div>
+                                    <label for="comp">Complemento*</label>
+                                    <input type="text" name="comp" id="comp" placeholder="XXXXXXXXXXXXXXXXXXX">
+                                </div>
+                            </div>
+                            <div class="form-control col-3">
+                                <div>
+                                    <label for="bairro">Bairro*</label>
+                                    <input type="text" name="bairro" id="bairro" placeholder="XXXXXXXXXXXXXXXXXXX">
+                                </div>
+                                <div>
+                                    <label for="cidade">Cidade*</label>
+                                    <input type="text" name="cidade" id="cidade" placeholder="XXXXXXXXXXXXXXXXXXX">
+                                </div>
+                                <div>
+                                    <label for="estado">Estado*</label>
+                                    <select id="estado" name="estado">
+                                        <option value=""> - Selecione - </option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                        <option value="EX">Estrangeiro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="info-and-checkbox">
+                                <div class="info-obrigatorios">
+                                    Campos com <span>*</span> possuem campo de preenchimento obrigatório
+                                </div>
+                                <div class="terms-checkbox">
+                                    <input type="checkbox" id="terms" name="terms">
+                                    <label for="terms" class="check-descricao">
+                                        Endereço Principal
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="btn-flex">
+                                <div class="btn-actions">
+                                    <button type="button" class="btn cancel" onclick="closeModal('address')">Cancelar</button>
+                                    <button type="button" class="btn confirm" onclick="closeModal('address')">Confirmar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -284,7 +378,10 @@
             </figure>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>

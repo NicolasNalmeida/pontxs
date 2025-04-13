@@ -1,0 +1,173 @@
+@use 'vars';
+
+.table-pedido {
+    margin-top: 50px;
+    border: 1px solid #9377C6;
+    border-radius: 14px;
+
+    .table-header {
+        padding: 20px;
+        border-bottom: 1px solid #9377C6;
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, center),
+            (justify-content, space-between)
+        );
+
+        .lb-cel {
+            font-weight: vars.$bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #9377C6
+        }
+
+        span { color: #424242; }
+
+        .div-header { width: 18% }
+        .div-header.sm { width: 28% }
+
+        .track {
+            cursor: pointer;
+            font-weight: vars.$bold;
+            color: #9377C6;
+            @include vars.flexProp(
+                (display, flex),
+                (align-items, center),
+                (justify-content, flex-end)
+            );
+
+            .icon {
+                color: #fff;
+                background-color: #9377C6;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-left: 10px;
+                @include vars.toRem(20px);
+                @include vars.flexProp(
+                    (display, flex),
+                    (align-items, center),
+                    (justify-content, center)
+                );
+            }
+        }
+
+        @media(max-width: vars.$bp1200) {
+            @include vars.flexProp(
+                (flex-wrap, wrap),
+            );
+
+            .div-header, .div-header.sm {
+                margin-bottom: 20px;
+                width: calc(100% / 4);
+            }
+
+            .track {
+                @include vars.flexProp(
+                    (justify-content, flex-start),
+                );
+            }
+        }
+
+        @media(max-width: vars.$bp1200) {
+            .div-header, .div-header.sm {
+                width: calc(100% / 3);
+            }
+        }
+
+        @media(max-width: vars.$bp600) {
+            .div-header, .div-header.sm {
+                width: calc(100% / 2);
+            }
+        }
+
+        @media(max-width: vars.$bp375) {
+            .div-header, .div-header.sm {
+                width: 100%;
+            }
+        }
+    }
+
+    .table-body {
+        padding: 20px;
+
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, center),
+            (justify-content, space-between)
+        );
+
+        .div-body:nth-child(1) { width: 15%; }
+        .div-body:nth-child(2) { width: 45%; }
+        .div-body.sm {
+            width: 40%;
+
+            @include vars.flexProp(
+                (display, flex),
+                (align-items, center),
+                (justify-content, flex-end)
+            );
+
+            a {
+                font-weight: vars.$bold;
+                text-decoration: none;
+                color: #9377C6;
+
+                .icon { margin-left: 5px; }
+            }
+        }
+
+        @media(max-width: vars.$bp600) {
+            @include vars.flexProp(
+                (flex-wrap, wrap)
+            );
+
+            .div-body.sm { width: 100%; margin-top: 10px; }
+            .div-body:nth-child(2) { width: 80%; }
+        }
+    }
+
+    .table-colapse {
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        @include vars.flexProp(
+            (display, flex),
+            (align-items, flex-end),
+            (justify-content, space-between)
+        );
+
+        &.open {
+            padding: 20px;
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+        }
+
+        h4 { margin-bottom: 20px; color: #4B4B4B; }
+        li { color: #4B4B4B; margin-bottom: 5px; }
+
+        a {
+            font-weight: vars.$bold;
+            text-decoration: none;
+            color: #9377C6;
+            .icon { margin-left: 5px; }
+        }
+
+        @media(max-width: vars.$bp600) {
+            @include vars.flexProp(
+                (flex-wrap, wrap),
+            );
+            .div-body { width: 100%; }
+
+            .div-body.sm {
+                margin-top: 20px;
+                @include vars.flexProp(
+                    (display, flex),
+                    (justify-content, flex-end)
+                );
+            }
+        }
+    }
+}
