@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pontxs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container flex-header">
+            <figure class="logo">
+                <button class="hamburger">
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                    <span class="hm"></span>
+                </button>
+                <img src="assets/img/logo-completo.png" alt="Logo">
+            </figure>
+            <form class="search">
+                <input class="search-input" type="text" placeholder="O que você Procura?">
+                <button class="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            <button class="saldo">
+                <span>Saldo</span>
+                <span class="count">6</span>
+            </button>
+            <div class="user-action">
+                <button class="fav-button">
+                    <i class="bi bi-suit-heart-fill"></i>
+                </button>
+                <span class="separator">|</span>
+                <button class="cart-button">
+                    <i class="bi bi-bag-dash-fill"></i>
+                </button>
+                <figure class="user-info">
+                    <i class="bi bi-chevron-down"></i>
+                    <img src="assets/img/user.png" alt="Usuário">
+                </figure>
+            </div>
+        </div>
+    </header>
+    <div class="saldo-mobile">
+        <div class="container flex">
+            <div class="saldo-mb">
+                <i class="icon bi bi-database"></i>
+                <span>Saldo</span>
+            </div>
+            <div class="count">
+                <span>6</span> pontos
+            </div>
+        </div>
+    </div>
+    <form class="search-mobile container">
+        <input class="search-input" type="text" placeholder="O que você Procura?">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    <main class="page-fale-conosco container">
+        <section class="fale-conosco ">
+            <div class="fale-conosco-header">
+                <h1>Fale Conosco</h1>
+                <nav class="breadcrumb">
+                    <a href="#">Home</a> >
+                    <a href="#">Fale Conosco</a>
+                </nav>
+            </div>
+
+            <!-- Grupo de campos: Dados Pessoais -->
+            <div class="form-default">
+                <h2>Precisa de ajuda? Preencha o formulário abaixo e entraremos em contato.</h2>
+                <div class="form-control">
+                    <label for="assunto" class="label sm">Assunto<span class="required">*</span></label>
+                    <select class="input lg" id="assunto">
+                        <option value="">Selecione</option>
+                        <option value="pedido_nao_recebido">Pedido não recebido / Pedido extraviado</option>
+                        <option value="cancelamento_troca">Cancelamento e troca</option>
+                        <option value="atraso_entrega">Atraso da entrega</option>
+                        <option value="produto_incorreto">Produto incorreto</option>
+                        <option value="produto_avariado">Produto avariado</option>
+                        <option value="produto_defeito">Produto com defeito</option>
+                        <option value="status_pedido">Status do pedido</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                </div>
+                <div class="form-control">
+                    <label for="mensagem" class="label sm">Mensagem<span class="required">*</span></label>
+                    <textarea class="input lg" id="mensagem" rows="4" required></textarea>
+                </div>
+
+            </div>
+
+            <!-- Botão de Salvar -->
+            <div class="actions">
+                <button type="submit" class="btn-save">Salvar</button>
+            </div>
+            <!-- Grupo de campos: Telefones -->
+            <div class="form-default chamados">
+                <h2 class="chamados-title">Chamados</h2>
+                <div class="form-3">
+                    <div class="form-control">
+
+                        <select class="input" id="id-chamado">
+                            <option value="">ID do chamado</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+
+                        <select class="input" id="assunto">
+                            <option value="">Assunto</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+
+                        <select class="input" id="status">
+                            <option value="">Status</option>
+                        </select>
+                    </div>
+                </div>
+
+                <section class="table-section">
+                    <div class="table-container">
+                        <!-- Cabeçalho (6 colunas) -->
+                        <div class="table-header">
+                            <div class="table-cell">Chamado</div> <!-- 1ª coluna -->
+                            <div class="table-cell">Assunto</div> <!-- 2ª coluna -->
+                            <div class="table-cell">Status</div> <!-- 3ª coluna -->
+                            <div class="table-cell">Tipo</div> <!-- 4ª coluna -->
+                            <div class="table-cell">Data</div> <!-- 5ª coluna -->
+                            <div class="table-cell"></div> <!-- 6ª coluna -->
+                        </div>
+
+                        <!-- Linha 1 (6 colunas, na mesma ordem) -->
+                        <div class="table-row">
+                            <div class="table-cell">#298</div>
+                            <div class="table-cell">Reclamação</div>
+                            <div class="table-cell">Finalizado</div>
+                            <div class="table-cell">Interno</div>
+                            <div class="table-cell">15/01/2025 16:50:18</div>
+                            <div class="table-cell">
+                                <button class="btn-visualizar">Visualizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Linha 2 (6 colunas, na mesma ordem) -->
+                        <div class="table-row">
+                            <div class="table-cell">#310</div>
+                            <div class="table-cell">Reclamação</div>
+                            <div class="table-cell">Finalizado</div>
+                            <div class="table-cell">Interno</div>
+                            <div class="table-cell">09/01/2025 12:20:23</div>
+                            <div class="table-cell">
+                                <button class="btn-visualizar">Visualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card-section">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <div class="card-row">
+                            <div class="card-cell"><span class="card-info">Chamado:</span> #298</div>
+                            <div class="card-cell"><span class="card-info">Assunto:</span> Reclamação</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-cell"><span class="card-info">Status:</span> Finalizado</div>
+                            <div class="card-cell"><span class="card-info">Data:</span> 15/01/2025 16:50:18</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-visualizar">Visualizar</button>
+                        </div>
+                    </div>
+                
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="card-row">
+                            <div class="card-cell"><span class="card-info">Chamado:</span> #310</div>
+                            <div class="card-cell"><span class="card-info">Assunto:</span> Reclamação</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-cell"><span class="card-info">Status:</span> Finalizado</div>
+                            <div class="card-cell"><span class="card-info">Data:</span> 09/01/2025 12:20:23</div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn-visualizar">Visualizar</button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="nav-footer">
+            <div class="container">
+                <a href="#">Sobre a Campanha</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Dúvidas Frequentes</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+        </nav>
+        <div class="down-footer">
+            <figure class="container flex">
+                <figcaption class="cap">
+                    Oferta válida até o término de nossos estoques. Vendas sujeitas à análise e confirmação de dados do
+                    pedido.
+                </figcaption>
+                <img class="logo" src="assets/img/logo.png" alt="Logo">
+            </figure>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,582 @@
+@use 'vars';
+
+.page-fale-conosco {
+    padding: 20px 0;
+
+    .fale-conosco {
+        margin: 0 auto;
+        max-width: 900px;
+
+        .fale-conosco-header {
+            margin-bottom: 30px;
+
+            .breadcrumb {
+                color: #4B4B4B;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #4B4B4B;
+                    padding-bottom: 50px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+
+            h1 {
+                @include vars.toRem(30px);
+                font-family: vars.$fontMain;
+                font-weight: vars.$regular;
+                color: #303030;
+                margin: 20px 0;
+            }
+        }
+
+        .profile-tabs ul {
+            @include vars.flexProp((display, flex));
+            margin: 40px 0 20px 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-tabs li {
+            margin-right: 50px;
+            border-bottom: 2px solid #9377c600;
+        }
+
+        .profile-tabs li[role="tab"] a {
+            @include vars.flexProp((display, flex),
+                (align-items, center));
+            gap: 10px;
+            text-decoration: none;
+            color: #4A4A4A;
+            @include vars.toRem(16px);
+            margin-bottom: 10px;
+        }
+
+        .profile-tabs li[role="tab"] a i {
+
+            color: #424242;
+            border: 3px solid #424242;
+            border-radius: 50%;
+            background-color: transparent;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .profile-tabs li[role="tab"] span {
+            @include vars.toRem(16px);
+            font-family: vars.$fontMain;
+            color: #424242;
+        }
+
+        .profile-tabs li[role="tab"]:hover span {
+            color: #9377C6;
+        }
+
+        .profile-tabs li[role="tab"]:hover {
+            color: #9377C6;
+            /* Cor do texto no hover */
+            border-bottom: 2px solid #9377C6;
+            /* Borda inferior roxa no hover */
+        }
+
+        .profile-tabs li[role="tab"]:hover i {
+            color: #fff;
+            background-color: #9377C6;
+            border: 3px solid #9377C6;
+        }
+
+
+
+        .form-default {
+            .form-control {
+                @include vars.flexProp((display, flex),
+                    (align-items, center));
+                gap: 40px;
+
+                @media (max-width: 992px) {
+                    @include vars.flexProp((flex-direction, column),
+                        (align-items, center));
+                    gap: 20px;
+                    align-items: start;
+                }
+
+
+                .profile-photo-preview {
+                    text-align: center;
+
+                    .profile-photo-preview-container {
+                        img {
+                            border-radius: 50%;
+                            border: 10px solid #9377C6; // Ajuste na borda
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    figcaption {
+                        .btn-change-photo {
+                            background-color: #9377C6;
+                            color: #fff;
+                            border: none;
+                            border-radius: 10px;
+                            padding: 10px 20px;
+                            @include vars.toRem(14px);
+                            cursor: pointer;
+
+                            &:hover {
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                }
+
+                .profile-photo-upload {
+                    flex: 1;
+                    max-width: 600px;
+
+                    .file-upload-label {
+                        @include vars.toRem(20px);
+                        color: #424242;
+                        font-weight: bold;
+                    }
+
+                    .file-upload-box {
+                        @include vars.flexProp((display, flex),
+                            (flex-direction, column),
+                            (align-items, center));
+                        margin-top: 10px;
+                        text-align: center;
+                        border: 1px dashed #424242; // Ajuste na borda
+                        border-radius: 20px;
+                        padding: 10px; // Ajuste no espaçamento interno
+                        width: 100%;
+                        max-width: 600px;
+                        gap: 10px;
+
+
+                        .bi-cloud-upload::before {
+                            @include vars.toRem(80px);
+                        }
+
+                        i {
+                            @include vars.toRem(60px);
+                            color: #9377C6;
+
+                        }
+
+                        #file-upload-description {
+                            color: #424242;
+                            text-align: center;
+                            @include vars.toRem(14px);
+                            font-weight: 400;
+                        }
+
+                        input[type='file'] {
+                            display: none;
+                        }
+
+                        .upload-buttons-container {
+                            @include vars.flexProp((display, flex),
+                                (justify-content, center),
+                                (flex-wrap, wrap));
+                            gap: 10px; // Ajuste no espaçamento entre os botões
+
+                            .btn-upload {
+                                @include vars.flexProp((display, flex),
+                                    (justify-content, center),
+                                    (align-items, center));
+                                background-color: #9377C6;
+                                color: #fff;
+                                border: none;
+                                border-radius: 10px;
+                                padding: 10px 30px; // Aumenta o tamanho do botão
+                                min-width: 180px; // Largura mínima para uniformidade
+                                @include vars.toRem(14px);
+                                font-family: vars.$fontMain;
+                                font-weight: vars.$regular;
+
+                                &:hover {
+                                    opacity: 0.9;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        .form-default {
+            background-color: #F1F1F1;
+            border: 1px solid #9377C6;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+
+            h2 {
+                @include vars.toRem(16px);
+                font-weight: vars.$regular;
+                color: #303030;
+                margin-bottom: 20px;
+
+            }
+
+            .chamados-title {
+                font-weight: vars.$fontMain;
+                @include vars.toRem(20px);
+                color: #424242;
+                font-weight: vars.$bolder;
+            }
+
+
+            .form-ep {
+
+                font-family: vars.$fontMain;
+                font-weight: vars.$regular;
+                @include vars.toRem(16px);
+                color: #FFFFFF;
+                border: none;
+                padding: 6px 11px;
+                border-radius: 20px;
+                background-color: #9377C6;
+                margin-bottom: 20px;
+
+            }
+
+            .required {
+                color: #9377C6;
+            }
+
+            .form-control {
+                margin-bottom: 15px;
+
+                .label {
+                    font-weight: vars.$bolder;
+                    font-family: vars.$fontMain;
+                    display: block;
+                    color: #424242;
+                    margin-bottom: 6px;
+                    @include vars.toRem(16px);
+
+                    @media (max-width: 768px) {
+                        @include vars.toRem(16px);
+                    }
+                }
+
+                .input {
+                    width: 100%;
+                    border: 1px solid #9377C6;
+                    @include vars.toRem(16px);
+                    border-radius: 10px;
+                    color: #AAAAAA;
+
+                    &::placeholder {
+                        color: #ccc;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border-color: #9377C6;
+                    }
+                }
+
+                .des-senha {
+                    font-family: vars.$fontMain;
+                    font-weight: vars.$regular;
+                    @include vars.toRem(12px);
+                    color: #666;
+                    margin-top: 4px;
+                    display: inline-block;
+                }
+
+            }
+
+            .form-1 {
+                @include vars.flexProp((display, flex));
+                gap: 30px;
+
+                .endereco {
+                    width: 80%;
+                }
+            }
+
+            .form-3,
+            .form-2,
+            .form-4 {
+                @include vars.flexProp((display, flex));
+                gap: 30px;
+
+                .form-control {
+                    flex: 1;
+                }
+
+                .endereco-input {
+                    width: 100%; // O campo de endereço ocupará 70% da largura
+                }
+
+                .numero-input {
+                    width: 30%; // O campo de número ocupará 30% da largura
+                }
+
+                .input-container {
+                    position: relative;
+                    @include vars.flexProp((display, flex),
+                        (align-items, center));
+                }
+            }
+
+            @media (max-width: vars.$bp768) {
+                .form-3 {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 15px;
+
+                    .form-control:nth-child(1) {
+                        grid-column: 1;
+                    }
+
+                    .form-control:nth-child(2) {
+                        grid-column: 2;
+                    }
+
+                    .form-control:nth-child(3) {
+                        grid-column: 1 / span 2;
+                    }
+
+                    .form-control .input {
+                        width: 100%;
+                        min-width: 0;
+
+                        &::placeholder {
+                            @include vars.toRem(12px);
+                        }
+                    }
+                }
+
+                .form-3 {
+                    @include vars.flexProp((flex-direction, column));
+                    gap: 15px;
+                }
+            }
+        }
+
+        .chamados {
+            background-color: #F4F4F4;
+            border: none;
+            padding: 0px;
+        }
+
+        .table-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* ======== GRID PARA CABEÇALHO E LINHAS ======== */
+        .table-header,
+        .table-row {
+            display: grid;
+            grid-template-columns:
+                80px
+                /* Chamado  */
+                150px
+                /* Assunto  */
+                100px
+                /* Status   */
+                80px
+                /* Tipo     */
+                200px
+                /* Data     */
+                100px;
+                /* Ações    */
+            column-gap: 10px;
+            align-items: center;
+
+        }
+
+
+        /* ======== CABEÇALHO ======== */
+        .table-header {
+            background-color: #9377C6;
+            color: #fff;
+            padding: 12px;
+            border: 1px solid #9377C6;
+            border-radius: 10px;
+            overflow: hidden;
+            /* garante que os cantos fiquem arredondados */
+            font-weight: bold;
+        }
+
+        /* ======== LINHAS (cartões brancos) ======== */
+        .table-row {
+            background-color: #F1F1F1;
+            color: #000;
+            padding: 12px;
+            border: 1px solid #9377C6;
+            border-radius: 10px;
+        }
+
+        /* ======== CÉLULAS ======== */
+        .table-cell {
+            display: flex;
+            /* permite alinhar texto ou ícones facilmente */
+            align-items: center;
+        }
+
+        /* ======== BOTÃO DE AÇÕES ======== */
+        .btn-visualizar {
+            background: #9377C6;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 40px;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover {
+                background: #a084c8;
+            }
+        }
+
+        .actions {
+            text-align: right;
+            border-bottom: 1px solid #9377C6;
+            margin-bottom: 20px;
+
+            .btn-save {
+                background-color: #9377C6;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                padding: 20px 60px;
+                @include vars.toRem(16px);
+                font-weight: vars.$bold;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        @media(max-width: vars.$bp768) {
+
+            .actions {
+
+                .btn-save {
+                    padding: 15px 40px;
+                    @include vars.toRem(14px);
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .card-section {
+            display: none;
+            /* Cards escondidos por padrão */
+        }
+
+        /* Estilos para dispositivos menores que 768px */
+        @media (max-width: 992px) {
+            .table-section {
+                display: none;
+                /* Esconde o layout da tabela */
+            }
+
+            .card-section {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                /* Espaçamento entre os cards */
+            }
+
+            .card {
+                background-color: #F1F1F1;
+                border: 1px solid #9377C6;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                /* Layout vertical */
+                gap: 15px;
+                /* Espaçamento entre as linhas do card */
+            }
+
+            .card-row {
+                display: flex;
+                gap: 150px;
+                /* Espaçamento entre colunas no mesmo row */
+            }
+
+            .card-cell {
+                display: flex;
+                flex-direction: column;
+                /* Rótulo em cima, valor embaixo */
+                font-size: 1em;
+                color: #333;
+                gap: 10px;
+
+                span {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    /* Espaçamento entre rótulo e valor */
+
+
+                }
+
+                .card-info {
+                    color: #9377C6;
+                }
+            }
+
+            .card-footer {
+                text-align: center;
+                /* Centraliza o botão */
+                margin-top: 10px;
+            }
+
+            .btn-visualizar {
+                background-color: #9377C6;
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                padding: 15px 60px;
+                /* Botão maior */
+                font-size: 1.1em;
+                width: 100%;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #a084c8;
+                }
+            }
+        }
+
+        @media (max-width: vars.$bp375) {
+            .card-row {
+                display: flex;
+                gap: 100px;
+                /* Espaçamento entre colunas no mesmo row */
+            }
+        }
+
+
+    }
+}
