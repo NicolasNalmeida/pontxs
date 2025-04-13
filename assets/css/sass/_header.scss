@@ -200,13 +200,16 @@
 
         .item-menu {
             margin-right: 40px;
+            width: calc(100% / 5);
 
             .link-item {
+                width: 100%;
+                text-align: center;
                 display: inline-block;
                 text-decoration: none;
                 color: #303030;
                 background-color: #eee;
-                padding: 6px 30px;
+                padding: 6px 25px;
                 border-radius: 30px;
                 transition: .3s;
 
@@ -297,6 +300,24 @@
                         width: 100%;
 
                         .drop-link { color: #fff; }
+                    }
+                }
+            }
+
+            @media(min-width: calc(vars.$bp992 + 1px)) {
+                &:hover {
+                    .drop-menu {
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        background-color: #fff;
+                        width: 100%;
+                        padding: 20px;
+                        border-radius: 10px;
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 2;
+                        height: auto;
                     }
                 }
             }
